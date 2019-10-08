@@ -1,4 +1,4 @@
-# AJAX and Static Site Generation
+# JAMStack, AJAX and Static Site Generation
 
 ## Homework
 
