@@ -342,8 +342,9 @@ Let's use the New York Times [developers](https://developer.nytimes.com/) site f
 document.addEventListener('click', clickHandlers);
 
 // store the link plus the API key in a variable
+// https://api.nytimes.com/svc/topstories/v2/science.json?api-key=uQG4jhIEHKHKm0qMKGcTHqUgAolr1GM0
 var nyt =
-  'https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=OuQiMDj0xtgzO80mtbAa4phGCAJW7GKa';
+  'https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=uQG4jhIEHKHKm0qMKGcTHqUgAolr1GM0';
 
 function clickHandlers() {
   if (event.target.matches('button')) {
@@ -1177,7 +1178,7 @@ Add CSS to taste:
 
 Note:
 
-- we are using the className frontmatter property to scope this page and enanble the css
+- we are using the className frontmatter property to scope this page and enable the css
 - the use of the `>` selector
 - the use of the `.nav-item-active a` selector
 - the root relative paths for the CSS and JavaScript.
