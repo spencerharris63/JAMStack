@@ -2,46 +2,172 @@
 
 ## Homework
 
-* watch this video on [Fetch](https://youtu.be/Oive66jrwBs)
-* create your own New York Times developer account and use it to customize your Ajax page
+- watch this video on [Fetch](https://youtu.be/Oive66jrwBs)
+- create your own New York Times developer account and use it to customize your Ajax page
 
 ## Exercise
 
-Today were are building [a multipage static website](https://zealous-kilby-113356.netlify.com) with an [ajax connection](https://zealous-kilby-113356.netlify.com/posts/ajax/) that pulls articles from the New York Times. 
+Today were are building [a multipage static website](https://zealous-kilby-113356.netlify.com) with an [ajax connection](https://zealous-kilby-113356.netlify.com/posts/ajax/) that pulls articles from the New York Times.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/044ddd8e-853d-4282-8248-b2eeab94168d/deploy-status)](https://app.netlify.com/sites/zealous-kilby-113356/deploys)
 
-**Do not download the zip.** Instead, use the same technique outlined last class to clone the repo:
-
 ```sh
-> cd ~/Desktop // or where ever you want to work from
-> git clone https://github.com/front-end-foundations/7-ajax-11ty.git
-> cd 7-ajax-11ty
-> npm install
+$ npm init -y
+$ npm install --save-dev @11ty/eleventy
 ```
 
-See which Github repo you're pushing to: 
+Add a script to `package.json`:
 
-```sh
-git remote -v
+```js
+"scripts": {
+  "start": "eleventy --serve"
+},
 ```
 
-Log into Github and create a new repo.
+Create `.eleventyignore` with the contents `readme.md`.
 
-[Change](https://help.github.com/en/articles/changing-a-remotes-url) the repo you are pushing to:
+Create `.gitignore` with the contents `node_modules` for later when we turn this into a repo.
 
-```sh
-git remote set-url <your gitub repo address>
+## Layout
+
+[Reference](https://www.11ty.io/docs/layouts/)
+
+Create `_includes/layout.html` at the top level with a simple `h1` tag.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>My Blog</title>
+  </head>
+  <body>
+    <div class="content">
+      <h1>{{ pageTitle }}</h1>
+      {{ content }}
+    </div>
+  </body>
+</html>
 ```
 
-Open and run the project:
+Create `index.html` on the top level with the following structure:
 
-```sh
-> code .
-> npm run start
+```html
+---
+layout: layout.html
+pageTitle: New York Today
+---
+
+<h2>Ajax</h2>
+
+<button>Click</button>
+
+<div></div>
 ```
 
-And open the localhost address in Chrome.
+Run `npm start` and open the localhost address in Chrome and examine the \_site directory.
+
+## Create a Collection
+
+[Reference](https://www.11ty.io/docs/collections/)
+
+In `posts/about.md`:
+
+```html
+---
+layout: layout.html
+tags: post
+pageTitle: About Us
+navTitle: About
+---
+
+We are a group of commited users.
+
+<a href="/">Home</a>
+```
+
+Create a navbar in `layout.html`:
+
+```html
+<ul>
+  {%- for post in collections.post -%}
+  <li>{{ post.data.navTitle }}</li>
+  {%- endfor -%}
+</ul>
+```
+
+Add a tag and nav title to index.html:
+
+```html
+---
+layout: layout.html
+pageTitle: New York Today
+navTitle: Ajax
+tags: post
+---
+
+<h2>Ajax</h2>
+
+<button>Click</button>
+
+<div></div>
+```
+
+You should see a list of page titles at the top.
+
+Use anchor tags:
+
+```html
+<ul>
+  {%- for post in collections.post -%}
+  <li>
+    <a href="{{ post.url | url }}">{{ post.data.navTitle }}</a>
+  </li>
+  {%- endfor -%}
+</ul>
+```
+
+Try adding a few more pages:
+
+`contact.html`:
+
+```html
+---
+pageTitle: Contact Us
+navTitle: Contact
+tags: post
+---
+
+<h2>Here's how:</h2>
+
+<ul>
+  <li>917 865 5517</li>
+</ul>
+
+<a href="/">Home</a>
+```
+
+`pictures.md`:
+
+```md
+---
+pageTitle: Apples
+navTitle: Pictures
+images:
+  - apples.png
+  - apples-red.png
+  - apples-group.png
+---
+
+{% for filename in images %}
+<img src="/img/{{ filename }}" alt="A nice picture of apples." srcset="">
+{% endfor %}
+
+[Home](/)
+```
 
 ## Ajax
 
@@ -63,7 +189,6 @@ navTitle: Ajax
 <button>Click</button>
 
 <div></div>
-
 ```
 
 Don't worry about the `---` material at the top. It is not part of the HTML and can be ignored (we'll get to it later).
@@ -115,157 +240,159 @@ Note the basic structure - an array of objects:
 
 The format is json - [JavaScript Object Notation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 
-Let's start out our script with event delegation. 
+Let's start out our script with event delegation.
 
 In `scripts.js`:
 
 ```js
-document.addEventListener('click', clickHandlers)
+document.addEventListener('click', clickHandlers);
 
-function clickHandlers(){
-  console.log(event.target)
+function clickHandlers() {
+  console.log(event.target);
 }
 ```
 
 Use [matches](https://developer.mozilla.org/en-US/docs/Web/API/Element/matches) in the context of in `if` statement to run a function:
 
 ```js
-document.addEventListener('click', clickHandlers)
+document.addEventListener('click', clickHandlers);
 
-function clickHandlers(){
-  if (event.target.matches('button')){
-    getData()
+function clickHandlers() {
+  if (event.target.matches('button')) {
+    getData();
   }
 }
 
-var getData = function () {
-	fetch('https://jsonplaceholder.typicode.com/posts')
-  .then(response => response.json())
-  .then(json => console.log(json))
-}
+var getData = function() {
+  fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(response => response.json())
+    .then(json => console.log(json));
+};
 ```
 
 Instead of logging the data we will call yet another function:
 
 ```js
-document.addEventListener('click', clickHandlers)
+document.addEventListener('click', clickHandlers);
 
-function clickHandlers(){
-  if (event.target.matches('button')){
-    getData()
+function clickHandlers() {
+  if (event.target.matches('button')) {
+    getData();
   }
 }
 
-var addContent = function(data){
-  console.log(data)
-	document.querySelector('.content div').innerText = data[1].body;
-}
+var addContent = function(data) {
+  console.log(data);
+  document.querySelector('.content div').innerText = data[1].body;
+};
 
-var getData = function () {
-	fetch('https://jsonplaceholder.typicode.com/posts')
-  .then(response => response.json())
-  .then(json => addContent(json))
-}
+var getData = function() {
+  fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(response => response.json())
+    .then(json => addContent(json));
+};
 ```
 
 Note:
 
-* `document.querySelector('.content div')` - targets an empty div
-* `data[1]` - we use `[1]` to get the second entry
-* `data[1].body` - we use `.` notation to access just one of the properties of the entry
+- `document.querySelector('.content div')` - targets an empty div
+- `data[1]` - we use `[1]` to get the second entry
+- `data[1].body` - we use `.` notation to access just one of the properties of the entry
 
 For comparison, here's the XMLHttpRequest version:
 
 ```js
-document.addEventListener('click', clickHandlers)
+document.addEventListener('click', clickHandlers);
 
-function clickHandlers(){
-  console.log(event.target)
-  if (event.target.matches('button')){
-    getData()
+function clickHandlers() {
+  console.log(event.target);
+  if (event.target.matches('button')) {
+    getData();
   }
 }
 
-var addContent = function(data){
-  console.log(data)
-	document.querySelector('.content div').innerText = data[4].title;
-}
+var addContent = function(data) {
+  console.log(data);
+  document.querySelector('.content div').innerText = data[4].title;
+};
 
-var getData = function(data){
+var getData = function(data) {
   var xhr = new XMLHttpRequest();
-  xhr.onload = function () {
+  xhr.onload = function() {
     if (xhr.status >= 200 && xhr.status < 300) {
       addContent(JSON.parse(xhr.responseText));
     } else {
       console.log('The request failed!');
     }
-  }
+  };
   xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts');
   xhr.send();
-}
+};
 ```
 
-Note: 
+Note:
 
-* `JSON.parse(xhr.responseText)` is similar to `response => response.json()` in the `fetch` version
+- `JSON.parse(xhr.responseText)` is similar to `response => response.json()` in the `fetch` version
 
 ## Looping
 
 Let's use the New York Times [developers](https://developer.nytimes.com/) site for our data.
 
 ```js
-document.addEventListener('click', clickHandlers)
+document.addEventListener('click', clickHandlers);
 
 // store the link plus the API key in a variable
-var nyt = 'https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=OuQiMDj0xtgzO80mtbAa4phGCAJW7GKa'
+var nyt =
+  'https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=OuQiMDj0xtgzO80mtbAa4phGCAJW7GKa';
 
-function clickHandlers(){
-  if (event.target.matches('button')){
-    getData()
+function clickHandlers() {
+  if (event.target.matches('button')) {
+    getData();
   }
 }
 
-var getData = function () {
-	fetch(nyt)
-  .then(response => response.json())
-  .then(json => console.log(json))
-}
+var getData = function() {
+  fetch(nyt)
+    .then(response => response.json())
+    .then(json => console.log(json));
+};
 ```
 
 Examine the nature of the returned data in the console. The `results` property contains the data we are interested in.
 
 ```js
-document.addEventListener('click', clickHandlers)
+document.addEventListener('click', clickHandlers);
 
-var nyt = 'https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=OuQiMDj0xtgzO80mtbAa4phGCAJW7GKa'
+var nyt =
+  'https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=OuQiMDj0xtgzO80mtbAa4phGCAJW7GKa';
 
-function clickHandlers(){
-  if (event.target.matches('button')){
-    getData()
+function clickHandlers() {
+  if (event.target.matches('button')) {
+    getData();
   }
 }
 
-var addContent = function(data){
+var addContent = function(data) {
   // initialize an empty variable
-  var looped = ''
+  var looped = '';
 
   // use += in a for loop that uses the length of the results
-  for(i=0; i<data.results.length; i++){
+  for (i = 0; i < data.results.length; i++) {
     looped += `
       <div class="item">
         <h3>${data.results[i].title}</h3>
         <p>${data.results[i].abstract}</p>
       </div>
-      `
+      `;
   }
-  document.querySelector('.content').innerHTML = looped
-}
+  document.querySelector('.content').innerHTML = looped;
+};
 
-var getData = function () {
-	fetch(nyt)
-  .then(response => response.json())
-  .then(json => addContent(json))
-}
+var getData = function() {
+  fetch(nyt)
+    .then(response => response.json())
+    .then(json => addContent(json));
+};
 ```
 
 Note: I've declared the variable looped _before_ I started working with it.
@@ -273,48 +400,51 @@ Note: I've declared the variable looped _before_ I started working with it.
 Something like the below wouldn't work as it resets the value everytime the for loop runs.
 
 ```js
-  for(i=0; i<data.results.length; i++){
-    var looped = ''
-    looped += `
+for (i = 0; i < data.results.length; i++) {
+  var looped = '';
+  looped += `
       <div class="item">
         <h3>${data.results[i].title}</h3>
         <p>${data.results[i].abstract}</p>
       </div>
-      `
-  }
+      `;
+}
 ```
 
 An alternative method (which is more advanced) might use the `map()` method on the array:
 
 ```js
-document.addEventListener('click', clickHandlers)
+document.addEventListener('click', clickHandlers);
 
-var nyt = 'https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=OuQiMDj0xtgzO80mtbAa4phGCAJW7GKa'
+var nyt =
+  'https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=OuQiMDj0xtgzO80mtbAa4phGCAJW7GKa';
 
-function clickHandlers(){
-  if (event.target.matches('button')){
-    getData()
+function clickHandlers() {
+  if (event.target.matches('button')) {
+    getData();
   }
 }
 
-var addContent = function(data){
-  var looped = data.results.map( (result) => (
-    `
+var addContent = function(data) {
+  var looped = data.results
+    .map(
+      result =>
+        `
       <div class="item">
         <h3>${result.title}</h3>
         <p>${result.abstract}</p>
       </div>
     `
-  )).join('')
-  document.querySelector('.content').innerHTML = looped
+    )
+    .join('');
+  document.querySelector('.content').innerHTML = looped;
+};
 
-}
-
-var getData = function () {
-	fetch(nyt)
-  .then(response => response.json())
-  .then(json => addContent(json))
-}
+var getData = function() {
+  fetch(nyt)
+    .then(response => response.json())
+    .then(json => addContent(json));
+};
 ```
 
 Add CSS to format the data:
@@ -341,9 +471,9 @@ Commit your changes and push to your github repo. A finished version of this fil
 
 Every generator uses a template processor - software designed to combine templates with data to output documents. The language that the templates are written in is known as a template language or templating language.
 
-The benefits of 11ty over other completing generators include the fact that it is written in JavaScript and its comparative simplicity. It uses [Liquid](https://shopify.github.io/liquid/) under the hood to make pages. Liquid is the in-house templating engine created and maintained by Shopify. You can use additional template engines with 11ty if you wish. 
+The benefits of 11ty over other completing generators include the fact that it is written in JavaScript and its comparative simplicity. It uses [Liquid](https://shopify.github.io/liquid/) under the hood to make pages. Liquid is the in-house templating engine created and maintained by Shopify. You can use additional template engines with 11ty if you wish.
 
-The most popular static site generator - Jekyll - is used at Github and is written in Ruby. 
+The most popular static site generator - Jekyll - is used at Github and is written in Ruby.
 
 You will be working from a new empty folder for this exercise.
 
@@ -392,26 +522,26 @@ You can view the page at `http://localhost:XXXX/posts/about/` where `XXXX` is th
 
 Note:
 
-* the generated `_site` folder
-* the new `index.html` in `posts/about`
-* the conversion from markdown to html
-* be careful not to edit the files in `_site` as they are generated
+- the generated `_site` folder
+- the new `index.html` in `posts/about`
+- the conversion from markdown to html
+- be careful not to edit the files in `_site` as they are generated
 
-Create `pictures.md` in posts (not in the _site folder):
+Create `pictures.md` in posts (not in the \_site folder):
 
 ```md
 # Pictures
 
 A collection of images.
 
-* pic one
-* pic two
-* ![image](http://pngimg.com/uploads/apple/apple_PNG12405.png)
+- pic one
+- pic two
+- ![image](http://pngimg.com/uploads/apple/apple_PNG12405.png)
 
 [Back](/)
 ```
 
-Note the new HTML file created at `http://localhost:XXXX/posts/pictures/`. Examine the file in the _site folder and note the conversion to HTML.
+Note the new HTML file created at `http://localhost:XXXX/posts/pictures/`. Examine the file in the \_site folder and note the conversion to HTML.
 
 ### Markdown
 
@@ -434,23 +564,23 @@ Create `index.html` at the top level.
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>My Blog</title>
-</head>
-<body>
-  <nav>
-    <ul>
-      <li><a href="/posts/about">About Us</a></li>
-      <li><a href="/posts/pictures">Pictures</a></li>
-    </ul>
-  </nav>
-  <div class="content">
-    <h1>Welcome to my Blog</h1>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Blog</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/posts/about">About Us</a></li>
+        <li><a href="/posts/pictures">Pictures</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <h1>Welcome to my Blog</h1>
+    </div>
+  </body>
 </html>
 ```
 
@@ -463,27 +593,24 @@ Save the below into it as `layout.html`:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>My Blog</title>
-</head>
-<body>
-  <nav>
-    <ul>
-      <li><a href="/posts/about">About Us</a></li>
-      <li><a href="/posts/pictures">Pictures</a></li>
-    </ul>
-  </nav>
-  
-  <div class="content">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Blog</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/posts/about">About Us</a></li>
+        <li><a href="/posts/pictures">Pictures</a></li>
+      </ul>
+    </nav>
 
+    <div class="content">
       {{ content }}
-
-  </div>
-
-</body>
+    </div>
+  </body>
 </html>
 ```
 
@@ -530,9 +657,7 @@ layout: layout.html
 pageTitle: About Us
 ---
 
-We are a group of commited users.
-
-[Home](/)
+We are a group of commited users. [Home](/)
 ```
 
 `about.md` now renders via the template.
@@ -545,11 +670,8 @@ layout: layout.html
 pageTitle: Pictures
 ---
 
-* pic one
-* pic two
-* ![image](http://pngimg.com/uploads/apple/apple_PNG12405.png)
-
-[Back](/)
+* pic one * pic two *
+![image](http://pngimg.com/uploads/apple/apple_PNG12405.png) [Back](/)
 ```
 
 ## Collections
@@ -567,9 +689,7 @@ tags:
 navTitle: About
 ---
 
-We are a group of commited users.
-
-[Home](/)
+We are a group of commited users. [Home](/)
 ```
 
 And in `pictures.md`:
@@ -583,11 +703,8 @@ tags:
 navTitle: Pictures
 ---
 
-* pic one
-* pic two
-* ![image](http://pngimg.com/uploads/apple/apple_PNG12405.png)
-
-[Back](/)
+* pic one * pic two *
+![image](http://pngimg.com/uploads/apple/apple_PNG12405.png) [Back](/)
 ```
 
 We will use use the nav collection to create a nav.
@@ -597,14 +714,16 @@ In layout.html:
 ```html
 <nav>
   <ul>
-  {% for nav in collections.nav %}
-    <li class="nav-item"><a href="{{ nav.url | url }}">{{ nav.data.navTitle }}</a></li>
-  {%- endfor -%}
+    {% for nav in collections.nav %}
+    <li class="nav-item">
+      <a href="{{ nav.url | url }}">{{ nav.data.navTitle }}</a>
+    </li>
+    {%- endfor -%}
   </ul>
 </nav>
 ```
 
-Note: `{% ... %}` is a liquid [tag](https://shopify.github.io/liquid/basics/introduction/). Templating tags create the logic and control flow for templates. 
+Note: `{% ... %}` is a liquid [tag](https://shopify.github.io/liquid/basics/introduction/). Templating tags create the logic and control flow for templates.
 
 This looks identical to our hard coded nav. Let's add a home link.
 
@@ -658,7 +777,7 @@ navTitle: Contact
 <h2>Here's how:</h2>
 
 <ul>
-	<li>917 865 5517</li>
+  <li>917 865 5517</li>
 </ul>
 
 <a href="/">Back</a>
@@ -683,9 +802,7 @@ images:
   - apples-group.png
 ---
 
-![Image of apples](img/apples.png)
-
-[Home](/)
+![Image of apples](img/apples.png) [Home](/)
 ```
 
 Note that the img folder in our project doesn't copy to the rendered site - we only see the alt text.
@@ -695,8 +812,8 @@ Note that the img folder in our project doesn't copy to the rendered site - we o
 Add a `.eleventy.js` file to the top level of the project:
 
 ```js
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("img");
+module.exports = function(eleventyConfig) {
+  eleventyConfig.addPassthroughCopy('img');
 };
 ```
 
@@ -710,7 +827,7 @@ We can use our collection to loop through the images collection with:
 
 ```html
 {% for filename in images %}
-<img src="/img/{{ filename }}" alt="A nice picture of apples." srcset="">
+<img src="/img/{{ filename }}" alt="A nice picture of apples." srcset="" />
 {% endfor %}
 ```
 
@@ -739,10 +856,10 @@ images:
 Add passthroughs for JavaScript and CSS in the `.eleventy.js` file and corresponding folders
 
 ```js
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("js");
+module.exports = function(eleventyConfig) {
+  eleventyConfig.addPassthroughCopy('css');
+  eleventyConfig.addPassthroughCopy('img');
+  eleventyConfig.addPassthroughCopy('js');
 };
 ```
 
@@ -754,16 +871,16 @@ Add a css folder and, inside it, `styles.css` with:
 
 ```css
 body {
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-		'Helvetica Neue', sans-serif;
-	color: #333;
-	font-size: 100%;
-	max-width: 980px;
-	margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #333;
+  font-size: 100%;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 img {
-	width: 100%;
+  width: 100%;
 }
 
 a {
@@ -772,19 +889,19 @@ a {
 }
 
 nav ul {
-	padding: 0;
-	list-style: none;
-	display: flex;
+  padding: 0;
+  list-style: none;
+  display: flex;
 }
 
 nav ul a {
-	padding: 0.5rem;
+  padding: 0.5rem;
 }
 
 article {
-	padding: 1rem;
-	display: grid;
-	grid-template-columns: repeat(1, 1fr);
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 }
 ```
 
@@ -793,42 +910,42 @@ And a link to it in the `layout.html` template:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/css/styles.css">
-  <title>My Blog</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>My Blog</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        {% for nav in collections.nav %}
+        <li
+          class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}"
+        >
+          <a href="{{ nav.url | url }}">{{ nav.data.navTitle }}</a>
+        </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
 
-  <nav>
-    <ul>
-    {% for nav in collections.nav %}
-      <li class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}"><a href="{{ nav.url | url }}">{{ nav.data.navTitle }}</a></li>
-    {%- endfor -%}
-    </ul>
-  </nav>
-
-  <div class="content">
-
+    <div class="content">
       <h1>{{ pageTitle }}</h1>
 
       {{ content }}
-      
-  </div>
-
-</body>
+    </div>
+  </body>
 </html>
 ```
 
 Note the addition of the `{% if ... endif %}` tag in the navbar. This creates a static active class that we will leverage shortly.
 
-**Restart the server and refresh the browser.** You should see the css in the _site directory and its effect on the site..
+**Restart the server and refresh the browser.** You should see the css in the \_site directory and its effect on the site..
 
 ## The Posts Collection
 
-We will add additional tags that can be used to reorganize content. 
+We will add additional tags that can be used to reorganize content.
 
 Instead of this however:
 
@@ -854,7 +971,7 @@ We can create `posts/posts.json`:
 
 Any document in the posts folder will inherit these properties so can can now remove the duplicate tags and layout metadata from all publications in the posts directory.
 
-* `posts/about.md`:
+- `posts/about.md`:
 
 ```md
 ---
@@ -867,7 +984,7 @@ We are a group of commited users.
 [Home](/)
 ```
 
-* `posts/contact.html`:
+- `posts/contact.html`:
 
 ```html
 ---
@@ -878,13 +995,13 @@ navTitle: Contact
 <h2>Here's how:</h2>
 
 <ul>
-	<li>917 865 5517</li>
+  <li>917 865 5517</li>
 </ul>
 
 <a href="/">Home</a>
 ```
 
-* and `posts/pictures.md`:
+- and `posts/pictures.md`:
 
 ```md
 ---
@@ -917,8 +1034,8 @@ navTitle: Home
 <p>Welcome to my site.</p>
 
 {% for post in collections.posts %}
-  <h2><a href="{{ post.url }}">{{ post.data.pageTitle }}</a></h2>
-  <em>{{ post.date | date: "%Y-%m-%d" }}</em>
+<h2><a href="{{ post.url }}">{{ post.data.pageTitle }}</a></h2>
+<em>{{ post.date | date: "%Y-%m-%d" }}</em>
 {% endfor %}
 ```
 
@@ -926,8 +1043,8 @@ Note: the `|` character in `post.date | date: "%Y-%m-%d"` is a filter. There are
 
 ```html
 {% for post in collections.posts %}
-  <h2><a href="{{ post.url }}">{{ post.data.pageTitle | upcase }}</a></h2>
-  <em>{{ post.date | date: "%Y-%m-%d" }}</em>
+<h2><a href="{{ post.url }}">{{ post.data.pageTitle | upcase }}</a></h2>
+<em>{{ post.date | date: "%Y-%m-%d" }}</em>
 {% endfor %}
 ```
 
@@ -947,7 +1064,6 @@ navTitle: Ajax
 <h2>Ajax</h2>
 
 <button>Click</button>
-
 ```
 
 Note the new `pageClass` property. We will use this in our `layout.html` template.
@@ -955,38 +1071,37 @@ Note the new `pageClass` property. We will use this in our `layout.html` templat
 Add the following to `js/scripts.js`:
 
 ```js
-document.addEventListener('click', clickHandlers)
+document.addEventListener('click', clickHandlers);
 
-var nyt = 'https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=OuQiMDj0xtgzO80mtbAa4phGCAJW7GKa'
+var nyt =
+  'https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=OuQiMDj0xtgzO80mtbAa4phGCAJW7GKa';
 
-function clickHandlers(){
-  if (event.target.matches('button')){
-    getData()
+function clickHandlers() {
+  if (event.target.matches('button')) {
+    getData();
   }
 }
 
-var addContent = function(data){
+var addContent = function(data) {
+  var looped = '';
 
-  var looped = ''
-
-  for(i=0; i<data.results.length; i++){
+  for (i = 0; i < data.results.length; i++) {
     looped += `
       <div class="item">
         <h3>${data.results[i].title}</h3>
         <p>${data.results[i].abstract}</p>
       </div>
-      `
+      `;
   }
 
-  document.querySelector('.content div').innerHTML = looped
+  document.querySelector('.content div').innerHTML = looped;
+};
 
-}
-
-var getData = function () {
-	fetch(nyt)
-  .then(response => response.json())
-  .then(json => addContent(json))
-}
+var getData = function() {
+  fetch(nyt)
+    .then(response => response.json())
+    .then(json => addContent(json));
+};
 ```
 
 And edit `layout.html` to include a link (`<script src="/js/scripts.js" ></script>`) to our JavaScript file _and_ to use `pageClass` (`<body class="{{ pageClass }}">`):
@@ -994,43 +1109,42 @@ And edit `layout.html` to include a link (`<script src="/js/scripts.js" ></scrip
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <link rel="stylesheet" href="/css/styles.css">
-  <title>My Blog</title>
-</head>
-<!-- new -->
-<body class="{{ pageClass }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>My Blog</title>
+  </head>
+  <!-- new -->
+  <body class="{{ pageClass }}">
+    <nav>
+      <ul>
+        {% for nav in collections.nav %}
+        <li
+          class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}"
+        >
+          <a href="{{ nav.url | url }}">{{ nav.data.navTitle }}</a>
+        </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
 
-<nav>
-<ul>
-{% for nav in collections.nav %}
-  <li class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}"><a href="{{ nav.url | url }}">{{ nav.data.navTitle }}</a></li>
-{%- endfor -%}
-</ul>
-</nav>
+    <div class="content">
+      <h1>{{ pageTitle }}</h1>
 
-<div class="content">
-
-    <h1>{{ pageTitle }}</h1>
-
-    {{ content }}
-    
-</div>
-<!-- new -->
-<script src="/js/scripts.js" ></script>
-
-</body>
+      {{ content }}
+    </div>
+    <!-- new -->
+    <script src="/js/scripts.js"></script>
+  </body>
 </html>
 ```
 
 Note:
 
-* the ajax should work
-* the body tag should now have the class defined in `ajax.html`
-
+- the ajax should work
+- the body tag should now have the class defined in `ajax.html`
 
 Add CSS to taste:
 
@@ -1042,18 +1156,18 @@ Add CSS to taste:
 }
 
 .ajax button {
-	border: none;
-	padding: 0.5rem 1rem;
-	background: #007eb6;
-	color: #fff;
-	border-radius: 4px;
-	font-size: 1rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  background: #007eb6;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
 .ajax .content > div {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
 }
 
 .ajax .item {
@@ -1062,10 +1176,11 @@ Add CSS to taste:
 ```
 
 Note:
-* we are using the className frontmatter property to scope this page and enanble the css
-* the use of the `>` selector
-* the use of the `.nav-item-active a` selector
-* the root relative paths for the CSS and JavaScript.
+
+- we are using the className frontmatter property to scope this page and enanble the css
+- the use of the `>` selector
+- the use of the `.nav-item-active a` selector
+- the root relative paths for the CSS and JavaScript.
 
 If we upload this to a web server our site will [break](http://oit2.scps.nyu.edu/~devereld/session7/_site/) due to the root links.
 
