@@ -7,9 +7,11 @@
 
 ## Exercise
 
-Today were are building [a multipage static website](https://zealous-kilby-113356.netlify.com) with an [ajax connection](https://zealous-kilby-113356.netlify.com/posts/ajax/) that pulls articles from the New York Times.
+Today were are building a simple multipage [static website](https://zealous-kilby-113356.netlify.com) with an [ajax connection](https://zealous-kilby-113356.netlify.com/posts/ajax/) that pulls articles from the New York Times.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/044ddd8e-853d-4282-8248-b2eeab94168d/deploy-status)](https://app.netlify.com/sites/zealous-kilby-113356/deploys)
+
+Create `.gitignore` with the contents `node_modules` for later when we turn this into a repo.
 
 ```sh
 $ npm init -y
@@ -24,9 +26,7 @@ Add a script to `package.json`:
 },
 ```
 
-Create `.eleventyignore` with the contents `readme.md`.
-
-Create `.gitignore` with the contents `node_modules` for later when we turn this into a repo.
+Create `.eleventyignore` with the contents `readme.md`. Here's the [documentation](https://www.11ty.dev/docs/ignores/) for Eleventy ignore files.
 
 ## Layout
 
@@ -55,10 +55,12 @@ Create `_includes/layout.html` at the top level with a simple `h1` tag.
 
 Create `index.html` on the top level with the following structure:
 
-```html
+```md
 ---
 layout: layout.html
 pageTitle: New York Today
+navTitle: Ajax
+tags: post
 ---
 
 <h2>Ajax</h2>
@@ -68,7 +70,31 @@ pageTitle: New York Today
 <div></div>
 ```
 
-Run `npm start` and open the localhost address in Chrome and examine the \_site directory.
+Add passthroughs for JavaScript and CSS in an `.eleventy.js` file.
+
+```js
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("img");
+  eleventyConfig.addPassthroughCopy("js");
+};
+```
+
+Run `npm start` and open the localhost address in Chrome and examine the `\_site` directory.
+
+Add CSS for the button:
+
+```css
+button {
+  border: none;
+  padding: 0.5rem 1rem;
+  background: #007eb6;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 4rem;
+}
+```
 
 ## Create a Collection
 
@@ -245,7 +271,7 @@ Let's start out our script with event delegation.
 In `scripts.js`:
 
 ```js
-document.addEventListener('click', clickHandlers);
+document.addEventListener("click", clickHandlers);
 
 function clickHandlers() {
   console.log(event.target);
@@ -255,41 +281,41 @@ function clickHandlers() {
 Use [matches](https://developer.mozilla.org/en-US/docs/Web/API/Element/matches) in the context of in `if` statement to run a function:
 
 ```js
-document.addEventListener('click', clickHandlers);
+document.addEventListener("click", clickHandlers);
 
 function clickHandlers() {
-  if (event.target.matches('button')) {
+  if (event.target.matches("button")) {
     getData();
   }
 }
 
-var getData = function() {
-  fetch('https://jsonplaceholder.typicode.com/posts')
-    .then(response => response.json())
-    .then(json => console.log(json));
+var getData = function () {
+  fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((response) => response.json())
+    .then((json) => console.log(json));
 };
 ```
 
 Instead of logging the data we will call yet another function:
 
 ```js
-document.addEventListener('click', clickHandlers);
+document.addEventListener("click", clickHandlers);
 
 function clickHandlers() {
-  if (event.target.matches('button')) {
+  if (event.target.matches("button")) {
     getData();
   }
 }
 
-var addContent = function(data) {
+var addContent = function (data) {
   console.log(data);
-  document.querySelector('.content div').innerText = data[1].body;
+  document.querySelector(".content div").innerText = data[1].body;
 };
 
-var getData = function() {
-  fetch('https://jsonplaceholder.typicode.com/posts')
-    .then(response => response.json())
-    .then(json => addContent(json));
+var getData = function () {
+  fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((response) => response.json())
+    .then((json) => addContent(json));
 };
 ```
 
@@ -302,30 +328,30 @@ Note:
 For comparison, here's the XMLHttpRequest version:
 
 ```js
-document.addEventListener('click', clickHandlers);
+document.addEventListener("click", clickHandlers);
 
 function clickHandlers() {
   console.log(event.target);
-  if (event.target.matches('button')) {
+  if (event.target.matches("button")) {
     getData();
   }
 }
 
-var addContent = function(data) {
+var addContent = function (data) {
   console.log(data);
-  document.querySelector('.content div').innerText = data[4].title;
+  document.querySelector(".content div").innerText = data[4].title;
 };
 
-var getData = function(data) {
+var getData = function (data) {
   var xhr = new XMLHttpRequest();
-  xhr.onload = function() {
+  xhr.onload = function () {
     if (xhr.status >= 200 && xhr.status < 300) {
       addContent(JSON.parse(xhr.responseText));
     } else {
-      console.log('The request failed!');
+      console.log("The request failed!");
     }
   };
-  xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts');
+  xhr.open("GET", "https://jsonplaceholder.typicode.com/posts");
   xhr.send();
 };
 ```
@@ -339,43 +365,43 @@ Note:
 Let's use the New York Times [developers](https://developer.nytimes.com/) site for our data.
 
 ```js
-document.addEventListener('click', clickHandlers);
+document.addEventListener("click", clickHandlers);
 
 // store the link plus the API key in a variable
 // https://api.nytimes.com/svc/topstories/v2/science.json?api-key=uQG4jhIEHKHKm0qMKGcTHqUgAolr1GM0
 var nyt =
-  'https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=uQG4jhIEHKHKm0qMKGcTHqUgAolr1GM0';
+  "https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=uQG4jhIEHKHKm0qMKGcTHqUgAolr1GM0";
 
 function clickHandlers() {
-  if (event.target.matches('button')) {
+  if (event.target.matches("button")) {
     getData();
   }
 }
 
-var getData = function() {
+var getData = function () {
   fetch(nyt)
-    .then(response => response.json())
-    .then(json => console.log(json));
+    .then((response) => response.json())
+    .then((json) => console.log(json));
 };
 ```
 
 Examine the nature of the returned data in the console. The `results` property contains the data we are interested in.
 
 ```js
-document.addEventListener('click', clickHandlers);
+document.addEventListener("click", clickHandlers);
 
 var nyt =
-  'https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=OuQiMDj0xtgzO80mtbAa4phGCAJW7GKa';
+  "https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=OuQiMDj0xtgzO80mtbAa4phGCAJW7GKa";
 
 function clickHandlers() {
-  if (event.target.matches('button')) {
+  if (event.target.matches("button")) {
     getData();
   }
 }
 
-var addContent = function(data) {
+var addContent = function (data) {
   // initialize an empty variable
-  var looped = '';
+  var looped = "";
 
   // use += in a for loop that uses the length of the results
   for (i = 0; i < data.results.length; i++) {
@@ -386,13 +412,13 @@ var addContent = function(data) {
       </div>
       `;
   }
-  document.querySelector('.content').innerHTML = looped;
+  document.querySelector(".content").innerHTML = looped;
 };
 
-var getData = function() {
+var getData = function () {
   fetch(nyt)
-    .then(response => response.json())
-    .then(json => addContent(json));
+    .then((response) => response.json())
+    .then((json) => addContent(json));
 };
 ```
 
@@ -402,7 +428,7 @@ Something like the below wouldn't work as it resets the value everytime the for 
 
 ```js
 for (i = 0; i < data.results.length; i++) {
-  var looped = '';
+  var looped = "";
   looped += `
       <div class="item">
         <h3>${data.results[i].title}</h3>
@@ -415,21 +441,21 @@ for (i = 0; i < data.results.length; i++) {
 An alternative method (which is more advanced) might use the `map()` method on the array:
 
 ```js
-document.addEventListener('click', clickHandlers);
+document.addEventListener("click", clickHandlers);
 
 var nyt =
-  'https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=OuQiMDj0xtgzO80mtbAa4phGCAJW7GKa';
+  "https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=OuQiMDj0xtgzO80mtbAa4phGCAJW7GKa";
 
 function clickHandlers() {
-  if (event.target.matches('button')) {
+  if (event.target.matches("button")) {
     getData();
   }
 }
 
-var addContent = function(data) {
+var addContent = function (data) {
   var looped = data.results
     .map(
-      result =>
+      (result) =>
         `
       <div class="item">
         <h3>${result.title}</h3>
@@ -437,14 +463,14 @@ var addContent = function(data) {
       </div>
     `
     )
-    .join('');
-  document.querySelector('.content').innerHTML = looped;
+    .join("");
+  document.querySelector(".content").innerHTML = looped;
 };
 
-var getData = function() {
+var getData = function () {
   fetch(nyt)
-    .then(response => response.json())
-    .then(json => addContent(json));
+    .then((response) => response.json())
+    .then((json) => addContent(json));
 };
 ```
 
@@ -608,9 +634,7 @@ Save the below into it as `layout.html`:
       </ul>
     </nav>
 
-    <div class="content">
-      {{ content }}
-    </div>
+    <div class="content">{{ content }}</div>
   </body>
 </html>
 ```
@@ -813,8 +837,8 @@ Note that the img folder in our project doesn't copy to the rendered site - we o
 Add a `.eleventy.js` file to the top level of the project:
 
 ```js
-module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy('img');
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy("img");
 };
 ```
 
@@ -848,20 +872,8 @@ images:
 ---
 
 {% for filename in images %}
-<img src="/img/{{ filename }}" alt="A nice picture of apples.">
-{% endfor %}
-
-[Home](/)
-```
-
-Add passthroughs for JavaScript and CSS in the `.eleventy.js` file and corresponding folders
-
-```js
-module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy('css');
-  eleventyConfig.addPassthroughCopy('img');
-  eleventyConfig.addPassthroughCopy('js');
-};
+<img src="/img/{{ filename }}" alt="A nice picture of apples." />
+{% endfor %} [Home](/)
 ```
 
 Note: if we were to restart the build process at this point you would receive an error due to the fact that these folders do not exist.
@@ -872,8 +884,8 @@ Add a css folder and, inside it, `styles.css` with:
 
 ```css
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #333;
   font-size: 100%;
   max-width: 980px;
@@ -1072,19 +1084,19 @@ Note the new `pageClass` property. We will use this in our `layout.html` templat
 Add the following to `js/scripts.js`:
 
 ```js
-document.addEventListener('click', clickHandlers);
+document.addEventListener("click", clickHandlers);
 
 var nyt =
-  'https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=OuQiMDj0xtgzO80mtbAa4phGCAJW7GKa';
+  "https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=OuQiMDj0xtgzO80mtbAa4phGCAJW7GKa";
 
 function clickHandlers() {
-  if (event.target.matches('button')) {
+  if (event.target.matches("button")) {
     getData();
   }
 }
 
-var addContent = function(data) {
-  var looped = '';
+var addContent = function (data) {
+  var looped = "";
 
   for (i = 0; i < data.results.length; i++) {
     looped += `
@@ -1095,13 +1107,13 @@ var addContent = function(data) {
       `;
   }
 
-  document.querySelector('.content div').innerHTML = looped;
+  document.querySelector(".content div").innerHTML = looped;
 };
 
-var getData = function() {
+var getData = function () {
   fetch(nyt)
-    .then(response => response.json())
-    .then(json => addContent(json));
+    .then((response) => response.json())
+    .then((json) => addContent(json));
 };
 ```
 
