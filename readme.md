@@ -4,6 +4,7 @@
   - [1.1. Homework](#11-homework)
   - [1.2. Goals](#12-goals)
   - [1.3. Static Site Generation](#13-static-site-generation)
+    - [The Jamstack](#the-jamstack)
     - [1.3.1. Eleventy](#131-eleventy)
     - [1.3.2. Initial Setup](#132-initial-setup)
     - [1.3.3. Create a Layout Template](#133-create-a-layout-template)
@@ -35,9 +36,19 @@
 
 ## 1.3. Static Site Generation
 
+### The Jamstack
+
+A "stack" is a collection of software used to solve a common problem. In web development common stacks include MEAN (MongoDB, ExpressJS, Angular and Node), MERN (MongoDB, ExpressJS, React and Node) and LAMP (Linux, Apache, MySQL, and PHP).
+
+The [JAMstack](https://jamstack.org/what-is-jamstack/) is an architecture that pre-renders pages and uses a build process to deploy them to a content delivery network.
+
+In terms of the [design patterns](https://github.com/front-end-foundations/FlexNav#aside---design-patterns) we examined previously, JAMstack sites are the simplest and most traditional - static HTML pages
+
 ### 1.3.1. Eleventy
 
-[Eleventy](https://www.11ty.io/) (aka 11ty) is a simple [static site generator](https://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/) (Smashing Magazine itself is [statically generated](https://www.smashingmagazine.com/2017/03/a-little-surprise-is-waiting-for-you-here/)). Static websites are very popular these days due to their simplicity, superior speed, SEO and security. Here is a [list](https://www.staticgen.com/) sorted by popularity.
+As we will learned, JAMstack sites use pre-rendering tools that use a build process to create the multiple pages that comprise a web site.
+
+[Eleventy](https://www.11ty.io/) (aka 11ty) is a simple [static site generator](https://jamstack.org/generators/) Static websites are very popular due to their simplicity, superior speed, SEO and security.
 
 Every generator uses a template processor - software designed to combine templates with data to output documents. The language that the templates are written in is known as a template language or templating language.
 
@@ -68,7 +79,7 @@ Add a script to `package.json`:
 },
 ```
 
-Create an `.eleventyignore` with the contents `readme.md`. Here's the [documentation](https://www.11ty.dev/docs/ignores/) for Eleventy ignore files.
+Note: since 11ty renders Markdown files we need to either delete the readme.md file in this repo or create an `.eleventyignore` file with the contents `readme.md`. Here's the [documentation](https://www.11ty.dev/docs/ignores/) for Eleventy ignore files.
 
 ### 1.3.3. Create a Layout Template
 
@@ -1154,5 +1165,3 @@ We can also hook into a Github branch to set up [continuous delpoyment](https://
 For more experience with 11ty, download the official 11ty blog template or, if you feel like a challenge and something fancier, try Villalobos' new [template](https://github.com/planetoftheweb/seven) or [Skeleventy](https://skeleventy.netlify.com/), or any of the starter files on the [11ty](https://www.11ty.io/docs/starter/) starter page.
 
 ## 1.5. Notes
-
-[JAM stack](https://jamstack.org/)
