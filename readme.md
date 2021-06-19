@@ -4,16 +4,16 @@
   - [1.1. Homework](#11-homework)
   - [1.2. Goals](#12-goals)
   - [1.3. Static Site Generation](#13-static-site-generation)
-    - [Initial Setup](#initial-setup)
     - [1.3.1. Eleventy](#131-eleventy)
-    - [1.3.2. Create a Layout Template](#132-create-a-layout-template)
-    - [1.3.3. Create a Collection](#133-create-a-collection)
+    - [1.3.2. Initial Setup](#132-initial-setup)
+    - [1.3.3. Create a Layout Template](#133-create-a-layout-template)
     - [1.3.4. Markdown](#134-markdown)
-    - [1.3.5. Templates](#135-templates)
-    - [1.3.6. Collections](#136-collections)
-    - [1.3.7. Pass Throughs](#137-pass-throughs)
-    - [1.3.8. Site Preferences](#138-site-preferences)
-    - [1.3.9. The Posts Collection](#139-the-posts-collection)
+    - [1.3.5. Create a Collection](#135-create-a-collection)
+    - [1.3.6. temp](#136-temp)
+    - [1.3.7. Collections](#137-collections)
+    - [1.3.8. Pass Throughs](#138-pass-throughs)
+    - [1.3.9. Site Preferences](#139-site-preferences)
+    - [1.3.10. The Posts Collection](#1310-the-posts-collection)
   - [1.4. Ajax](#14-ajax)
     - [1.4.1. Fetch](#141-fetch)
     - [1.4.2. Rest API](#142-rest-api)
@@ -35,7 +35,17 @@
 
 ## 1.3. Static Site Generation
 
-### Initial Setup
+### 1.3.1. Eleventy
+
+[Eleventy](https://www.11ty.io/) (aka 11ty) is a simple [static site generator](https://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/) (Smashing Magazine itself is [statically generated](https://www.smashingmagazine.com/2017/03/a-little-surprise-is-waiting-for-you-here/)). Static websites are very popular these days due to their simplicity, superior speed, SEO and security. Here is a [list](https://www.staticgen.com/) sorted by popularity.
+
+Every generator uses a template processor - software designed to combine templates with data to output documents. The language that the templates are written in is known as a template language or templating language.
+
+The benefits of 11ty over other completing generators include the fact that it is written in JavaScript and its comparative simplicity. It uses [Liquid](https://shopify.github.io/liquid/) under the hood to make pages. Liquid is the in-house templating engine created and maintained by Shopify. You can use additional template engines with 11ty if you wish.
+
+The most popular static site generator - Jekyll - is used at Github and is written in Ruby.
+
+### 1.3.2. Initial Setup
 
 Today were are building a simple multipage [static website](https://zealous-kilby-113356.netlify.com) with an [ajax connection](https://zealous-kilby-113356.netlify.com/posts/ajax/) that pulls articles from the New York Times.
 
@@ -58,19 +68,9 @@ Add a script to `package.json`:
 },
 ```
 
-Create `.eleventyignore` with the contents `readme.md`. Here's the [documentation](https://www.11ty.dev/docs/ignores/) for Eleventy ignore files.
+Create an `.eleventyignore` with the contents `readme.md`. Here's the [documentation](https://www.11ty.dev/docs/ignores/) for Eleventy ignore files.
 
-### 1.3.1. Eleventy
-
-[Eleventy](https://www.11ty.io/) (aka 11ty) is a simple [static site generator](https://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/) (Smashing Magazine itself is [statically generated](https://www.smashingmagazine.com/2017/03/a-little-surprise-is-waiting-for-you-here/)). Static websites are very popular these days due to their simplicity, superior speed, SEO and security. Here is a [list](https://www.staticgen.com/) sorted by popularity.
-
-Every generator uses a template processor - software designed to combine templates with data to output documents. The language that the templates are written in is known as a template language or templating language.
-
-The benefits of 11ty over other completing generators include the fact that it is written in JavaScript and its comparative simplicity. It uses [Liquid](https://shopify.github.io/liquid/) under the hood to make pages. Liquid is the in-house templating engine created and maintained by Shopify. You can use additional template engines with 11ty if you wish.
-
-The most popular static site generator - Jekyll - is used at Github and is written in Ruby.
-
-### 1.3.2. Create a Layout Template
+### 1.3.3. Create a Layout Template
 
 [Reference](https://www.11ty.io/docs/layouts/)
 
@@ -97,21 +97,6 @@ Create `_includes/layout.html` at the top level:
 
 Note the `{{ pageTitle }}` and `{{ content }}` template regions. Our content will be inserted there.
 
-Create `index.html` on the top level with the following structure:
-
-```html
----
-layout: layout.html
-pageTitle: New York Today
----
-
-<h2>Ajax</h2>
-
-<button>Click</button>
-
-<div></div>
-```
-
 Add [passthroughs](https://www.11ty.dev/docs/copy/) for our static assets in an `.eleventy.js` file.
 
 ```js
@@ -122,22 +107,63 @@ module.exports = function (eleventyConfig) {
 };
 ```
 
+This is our eleventy configuration file. It is a function that exports its contents for use by the Eleventy publishing system.
+
+Create `index.md` on the top level with the following structure:
+
+```md
+---
+layout: layout.html
+pageTitle: New York Today
+navTitle: Home
+tags: post
+---
+
+## Articles
+
+<button>Click</button>
+
+<div></div>
+```
+
 Run `npm start` and open the localhost address in Chrome and examine the `\_site` directory.
 
 Note:
 
+- the generated `_site` folder
+- the conversion from markdown to html
 - the files specified in our config are copied into `_site`
+- the new `index.html` in `posts/about`
 - the index file we created has been merged into `_includes/layout` because of the `layout: layout.html` front matter instruction
 - `<h1>{{ pageTitle }}</h1>` in our template is using the data in the front matter `pageTitle: New York Today`
 - `{{ content }}` in our template is using the code that appears below the front matter
+- do not edit the files in `_site` as they are generated
 
 The template uses a templating language called [liquid](https://shopify.github.io/liquid/basics/introduction/) developed by Shopify. we will be using a handfull of these. eleventy supports many templating languages.
 
 Because the `_site` folder is generated by eleventy we can add it to our `.gitignore`.
 
-### 1.3.3. Create a Collection
+### 1.3.4. Markdown
 
-To create our pages we will use a combination of html and markdown. [Markdown](https://www.markdownguide.org/getting-started/) is an extremely simple language used extensively in web development.
+[Markdown](https://www.markdownguide.org/getting-started/) is an extremely simple language used extensively in web development.
+
+It allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid HTML. invented by [John Gruber](https://daringfireball.net/projects/markdown/) - it (or one of its flavors) is ubiquitous in web publishing. This readme file is written in [markdown](https://help.github.com/en/articles/basic-writing-and-formatting-syntax).
+
+Note: many of the conventions for Markdown arose from how people used email when it was confined to simple text documents, e.g. a bulleted list:
+
+```txt
+* item one
+* item two
+* item three
+```
+
+- item one
+- item two
+- item three
+
+### 1.3.5. Create a Collection
+
+To create our pages we will use a combination of html and markdown.
 
 We wll create a collection of pages using [tags](https://www.11ty.io/docs/collections/) in our front matter.
 
@@ -252,119 +278,9 @@ Try:
 - changing the name of the folder `posts` to `pages`
 - adding, editing and removing the
 
-===
+==========================================================================================================
 
-Create a `posts` folder and within it, a sample markdown file `about.md`:
-
-```md
-# About Us
-
-We are a group of commited users.
-
-[Back](/)
-```
-
-Start 11ty by running the npm script we created:
-
-```sh
-npm run start
-```
-
-Note the creation of the `_site` folder and its contents.
-
-You can view the page at `http://localhost:XXXX/posts/about/` where `XXXX` is the port 11ty is running on.
-
-Note:
-
-- the generated `_site` folder
-- the new `index.html` in `posts/about`
-- the conversion from markdown to html
-- be careful not to edit the files in `_site` as they are generated
-
-Create `pictures.md` in posts (not in the \_site folder):
-
-```md
-# Pictures
-
-A collection of images.
-
-- pic one
-- pic two
-- ![image](http://pngimg.com/uploads/apple/apple_PNG12405.png)
-
-[Back](/)
-```
-
-Note the new HTML file created at `http://localhost:XXXX/posts/pictures/`. Examine the file in the \_site folder and note the conversion to HTML.
-
-### 1.3.4. Markdown
-
-Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid HTML. invented by [John Gruber](https://daringfireball.net/projects/markdown/) - it (or one of its flavors) is ubiquitous in web publishing. This readme file is written in [Github flavored](https://help.github.com/en/articles/basic-writing-and-formatting-syntax) markdown.
-
-A lot of the conventions for Markdown arose from how people used email when it was confined to simple text documents, e.g. a bulleted list:
-
-```txt
-* item one
-* item two
-* item three
-```
-
-### 1.3.5. Templates
-
-These new files need a template. Recall, one main goal of a static site generator is to combine articles with templates(s) to produce HTML pages.
-
-Create `index.html` at the top level.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>My Blog</title>
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="/posts/about">About Us</a></li>
-        <li><a href="/posts/pictures">Pictures</a></li>
-      </ul>
-    </nav>
-    <div class="content">
-      <h1>Welcome to my Blog</h1>
-    </div>
-  </body>
-</html>
-```
-
-Navigate to `http://localhost:XXXX/` and test the navigation. This is not a template yet
-
-Create an `_includes` folder at the top level of the project.
-
-Save the below into it as `layout.html`:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>My Blog</title>
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="/posts/about">About Us</a></li>
-        <li><a href="/posts/pictures">Pictures</a></li>
-      </ul>
-    </nav>
-
-    <div class="content">{{ content }}</div>
-  </body>
-</html>
-```
+### 1.3.6. temp
 
 Recall, 11ty uses a templating software called Liquid by default. `{{ content }}` is a Liquid [object](https://shopify.github.io/liquid/basics/introduction/). If templating is new to you don't worry, it is generally quite simple and can be mastered easily. There are many templating languages besides Liquid (and 11ty supports most). You will eventually find one that works best for you.
 
@@ -426,7 +342,7 @@ pageTitle: Pictures
 ![image](http://pngimg.com/uploads/apple/apple_PNG12405.png) [Back](/)
 ```
 
-### 1.3.6. Collections
+### 1.3.7. Collections
 
 [Collections](https://www.11ty.io/docs/collections/) can be used to group, sort and filter content.
 
@@ -493,7 +409,7 @@ navTitle: Home
 <p>Welcome to my site.</p>
 ```
 
-Note: you can usually use HTML in a markdown file.
+Note: you can use HTML in a markdown file.
 
 Add `contact.md` to the posts folder:
 
@@ -535,7 +451,7 @@ navTitle: Contact
 <a href="/">Back</a>
 ```
 
-### 1.3.7. Pass Throughs
+### 1.3.8. Pass Throughs
 
 We will add some images to the pictures page. Copy the `img` folder from today's project into the new eleventy folder.
 
@@ -559,7 +475,7 @@ images:
 
 Note that the img folder in our project doesn't copy to the rendered site - we only see the alt text.
 
-### 1.3.8. Site Preferences
+### 1.3.9. Site Preferences
 
 Add a `.eleventy.js` file to the top level of the project:
 
@@ -683,7 +599,7 @@ Note the addition of the `{% if ... endif %}` tag in the navbar. This creates a 
 
 **Restart the server and refresh the browser.** You should see the css in the \_site directory and its effect on the site..
 
-### 1.3.9. The Posts Collection
+### 1.3.10. The Posts Collection
 
 We will add additional tags that can be used to reorganize content.
 
@@ -789,6 +705,8 @@ Note: the `|` character in `post.date | date: "%Y-%m-%d"` is a filter. There are
 ```
 
 Note: to make sure it shows up first in the nav add `date: 2010-01-01` to the front matter in `index.html`.
+
+==========================================================================================================
 
 ## 1.4. Ajax
 
