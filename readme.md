@@ -41,6 +41,8 @@
 - use templates to create html pages
 - introduce templating languages
 
+The [site we are creating](https://heuristic-morse-711174.netlify.app/).
+
 ## 1.4. Static Site Generation
 
 ### 1.4.1. The Jamstack
