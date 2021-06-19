@@ -2,45 +2,48 @@
 
 - [1. The JAMStack, AJAX and Static Site Generation](#1-the-jamstack-ajax-and-static-site-generation)
   - [1.1. Homework](#11-homework)
-  - [1.2. Goals](#12-goals)
-  - [1.3. Static Site Generation](#13-static-site-generation)
-    - [1.3.1. The Jamstack](#131-the-jamstack)
-    - [1.3.2. Eleventy](#132-eleventy)
-    - [1.3.3. Initial Setup](#133-initial-setup)
-    - [1.3.4. Create a Layout Template](#134-create-a-layout-template)
-  - [````md](#md)
-  - [1.5. pageTitle: New York Today](#15-pagetitle-new-york-today)
+  - [1.2. Reading](#12-reading)
+  - [1.3. Goals](#13-goals)
+  - [1.4. Static Site Generation](#14-static-site-generation)
+    - [1.4.1. The Jamstack](#141-the-jamstack)
+    - [1.4.2. Eleventy](#142-eleventy)
+    - [1.4.3. Initial Setup](#143-initial-setup)
+    - [1.4.4. Create a Layout Template](#144-create-a-layout-template)
   - [1.6. Articles](#16-articles)
     - [1.6.1. Markdown](#161-markdown)
     - [1.6.2. Create a Collection](#162-create-a-collection)
-  - [1.9. Articles](#19-articles)
-    - [1.9.1. Templating and Front Matter](#191-templating-and-front-matter)
-      - [1.9.1.1. Collections](#1911-collections)
-      - [1.9.1.2. HTML and Markdown](#1912-html-and-markdown)
-    - [1.9.2. Simplify the Posts Collection](#192-simplify-the-posts-collection)
-    - [1.9.3. Commit and Deploy](#193-commit-and-deploy)
-  - [1.10. Ajax](#110-ajax)
-    - [1.10.1. Fetch](#1101-fetch)
-    - [1.10.2. Rest API](#1102-rest-api)
-    - [1.10.3. Looping](#1103-looping)
-    - [1.10.4. Second Deploy](#1104-second-deploy)
-  - [1.11. Notes](#111-notes)
+  - [1.7. Articles](#17-articles)
+    - [1.7.1. Templating and Front Matter](#171-templating-and-front-matter)
+      - [1.7.1.1. Collections](#1711-collections)
+      - [1.7.1.2. HTML and Markdown](#1712-html-and-markdown)
+    - [1.7.2. Simplify the Posts Collection](#172-simplify-the-posts-collection)
+    - [1.7.3. Commit and Deploy](#173-commit-and-deploy)
+  - [1.8. Ajax](#18-ajax)
+    - [1.8.1. Fetch](#181-fetch)
+    - [1.8.2. Rest API](#182-rest-api)
+    - [1.8.3. Looping](#183-looping)
+    - [1.8.4. Second Deploy](#184-second-deploy)
+  - [1.9. Notes](#19-notes)
 
 ## 1.1. Homework
+
+- tbd
+
+## 1.2. Reading
 
 - watch this video on [Fetch](https://youtu.be/Oive66jrwBs)
 - create your own New York Times developer account and use it to customize your Ajax page
 
-## 1.2. Goals
+## 1.3. Goals
 
 - introduce static site generation with eleventy
 - introduce the Markdown language
 - use templates to create html pages
 - introduce templating languages
 
-## 1.3. Static Site Generation
+## 1.4. Static Site Generation
 
-### 1.3.1. The Jamstack
+### 1.4.1. The Jamstack
 
 A "stack" is a collection of software used to solve a common problem. In web development common stacks include MEAN (MongoDB, ExpressJS, Angular and Node), MERN (MongoDB, ExpressJS, React and Node) and LAMP (Linux, Apache, MySQL, and PHP).
 
@@ -48,7 +51,7 @@ The [JAMstack](https://jamstack.org/what-is-jamstack/) is an architecture that p
 
 In terms of the [design patterns](https://github.com/front-end-foundations/FlexNav#aside---design-patterns) we examined previously, JAMstack sites are the simplest and most traditional - static HTML pages
 
-### 1.3.2. Eleventy
+### 1.4.2. Eleventy
 
 As we will learned, JAMstack sites use pre-rendering tools that use a build process to create the multiple pages that comprise a web site.
 
@@ -60,7 +63,7 @@ The benefits of 11ty over other completing generators include the fact that it i
 
 The most popular static site generator - Jekyll - is used at Github and is written in Ruby.
 
-### 1.3.3. Initial Setup
+### 1.4.3. Initial Setup
 
 Today were are building a simple multipage [static website](https://zealous-kilby-113356.netlify.com) with an [ajax connection](https://zealous-kilby-113356.netlify.com/posts/ajax/) that pulls articles from the New York Times.
 
@@ -85,7 +88,7 @@ Add a script to `package.json`:
 
 Note: since 11ty renders Markdown files we need to either delete the readme.md file in this repo or create an `.eleventyignore` file with the contents `readme.md`. Here's the [documentation](https://www.11ty.dev/docs/ignores/) for Eleventy ignore files.
 
-### 1.3.4. Create a Layout Template
+### 1.4.4. Create a Layout Template
 
 [Reference](https://www.11ty.io/docs/layouts/)
 
@@ -146,10 +149,10 @@ Note:
 
 Link the page to our template and add more content:
 
-````md
----
+`````md
 layout: layout.html
-1.5. pageTitle: New York Today
+1.6. pageTitle: New York Today
+
 ---
 
 ## 1.6. Articles
@@ -163,11 +166,12 @@ We will use `document.querySelector` and
   <head> </head>
 </html>
 ```
-````
+
+```
 
 A list of articles will apear here
 
-`````
+```
 
 The index file we created has been merged with `_includes/layout` because of the `layout: layout.html` front matter instruction.
 
@@ -247,7 +251,7 @@ navTitle: Home
 
 ---
 
-## 1.9. Articles
+## 1.7. Articles
 
 > Dorothy followed her through many of the beautiful rooms in her castle.
 
@@ -260,6 +264,7 @@ We will use `document.querySelector` and
 ```
 
 A list of articles will apear here
+````
 `````
 
 You should see a list of navTitles at the top.
@@ -335,7 +340,7 @@ images:
 ---
 ```
 
-### 1.9.1. Templating and Front Matter
+### 1.7.1. Templating and Front Matter
 
 Recall, 11ty uses a templating software called Liquid by default. `{{ content }}` is a Liquid [object](https://shopify.github.io/liquid/basics/introduction/). If templating is new to you don't worry, it is generally quite simple and can be mastered easily.
 
@@ -343,7 +348,7 @@ There are many [templating languages](https://colorlib.com/wp/top-templating-eng
 
 The material at the top between the `---`'s is called [frontmatter](https://www.11ty.io/docs/data-frontmatter/) and uses `Yaml` (Yet Another Markup Language) syntax.
 
-#### 1.9.1.1. Collections
+#### 1.7.1.1. Collections
 
 [Collections](https://www.11ty.io/docs/collections/) use tags to group content.
 
@@ -368,7 +373,7 @@ navTitle: Contact
 
 Note: front matter tags can be written `tags: page` or `tags: [page]` if you need multiple tags use: `tags: [page, other]`. Here's the tagging [documentation](https://www.11ty.io/docs/collections/#tag-syntax).
 
-#### 1.9.1.2. HTML and Markdown
+#### 1.7.1.2. HTML and Markdown
 
 You can use HTML in a markdown file:
 
@@ -393,7 +398,7 @@ You can use HTML files alongside markdown.
 
 Change the name of `contact.md` to `contact.html`.
 
-### 1.9.2. Simplify the Posts Collection
+### 1.7.2. Simplify the Posts Collection
 
 We will add additional tags that can be used to reorganize content.
 
@@ -459,7 +464,7 @@ Note: the `|` character in `post.date | date: "%Y-%m-%d"` is a filter. There are
 {% endfor %}
 ```
 
-### 1.9.3. Commit and Deploy
+### 1.7.3. Commit and Deploy
 
 Commit your changes, merge them into the main branch and push your site to a new Github repository.
 
@@ -467,7 +472,7 @@ Sign into Netlify and create a new site from Git. Check the settings to ensure t
 
 Examine the deploy logs. Note that Netlify will download and install 11ty in order to generate your `_site` folder.
 
-## 1.10. Ajax
+## 1.8. Ajax
 
 Ajax allows you to get data from your own or another's service. Web services expose data in the form of an API which allows you to get, delete, update or create data via [routes](http://jsonplaceholder.typicode.com/).
 
@@ -506,13 +511,13 @@ Add a hard coded link to the page in the template:
 </nav>
 ```
 
-### 1.10.1. Fetch
+### 1.8.1. Fetch
 
 The `fetch()` [API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) takes one mandatory argument, the path to the resource you want to fetch. It returns something known as a Promise that returns a response after the content is received.
 
 _API_ stands for [Application Programming Interface](https://medium.freecodecamp.org/what-is-an-api-in-english-please-b880a3214a82).
 
-### 1.10.2. Rest API
+### 1.8.2. Rest API
 
 We need data we can fetch from the internet. We'll start with the [Typicode](http://jsonplaceholder.typicode.com/) play ground. Note that you can do more than just get data, you can also post, create, delete and update data. Together these functions are often refered to a `CRUD`.
 
@@ -632,7 +637,7 @@ function showData(data) {
 }
 ```
 
-### 1.10.3. Looping
+### 1.8.3. Looping
 
 ```js
 document.addEventListener("click", clickHandlers);
@@ -804,11 +809,11 @@ function showData(stories) {
 getStories();
 ```
 
-### 1.10.4. Second Deploy
+### 1.8.4. Second Deploy
 
 Commit, merge and push the content to Github. Log in to [app.netlify.com](https://app.netlify.com) and ensure that the deploy has succeeded.
 
-## 1.11. Notes
+## 1.9. Notes
 
 For more experience with 11ty, download the official 11ty blog template or, if you feel like a challenge and something fancier, try Villalobos' new [template](https://github.com/planetoftheweb/seven) or [Skeleventy](https://skeleventy.netlify.com/), or any of the starter files on the [11ty](https://www.11ty.io/docs/starter/) starter page.
 
