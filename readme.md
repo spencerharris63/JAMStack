@@ -36,10 +36,10 @@
 
 ## 1.3. Goals
 
-- introduce static site generation with eleventy
+- introduce static site generation (SSG) with eleventy (11ty)
 - introduce the Markdown language
-- use templates to create html pages
-- introduce templating languages
+- use templates and markdown to generate a web site
+- introduce templating languages (Liquid)
 
 The [site we are creating](https://heuristic-morse-711174.netlify.app/).
 
@@ -57,19 +57,17 @@ In terms of the [design patterns](https://github.com/front-end-foundations/FlexN
 
 As we will learned, JAMstack sites use pre-rendering tools that use a build process to create the multiple pages that comprise a web site.
 
-[Eleventy](https://www.11ty.io/) (aka 11ty) is a simple [static site generator](https://jamstack.org/generators/) Static websites are very popular due to their simplicity, superior speed, SEO and security.
+[Eleventy](https://www.11ty.io/) (aka 11ty) is a simple [static site generator](https://jamstack.org/generators/) (SSG). Static websites are very popular due to their simplicity, superior speed, SEO and security.
 
-Every generator uses a template processor - software designed to combine templates with data to output documents. The language that the templates are written in is known as a template language or templating language.
+Every generator uses a template processor - software designed to combine templates with data to output pages. The end result is a static website, made up of mainly HTML pages in folders. These folders and HTML pages can be hosted anywhere that allows you to put HTML pages on the internet.
 
-The benefits of 11ty over other completing generators include the fact that it is written in JavaScript and its comparative simplicity. It uses [Liquid](https://shopify.github.io/liquid/) under the hood to make pages. Liquid is the in-house templating engine created and maintained by Shopify. You can use additional template engines with 11ty if you wish.
-
-The most popular static site generator - Jekyll - is used at Github and is written in Ruby.
+The benefits of 11ty over other completing generators include the fact that it is written in JavaScript and its simplicity. It uses a templating engine (we'll use [Liquid](https://shopify.github.io/liquid/)) under the hood to make pages. Liquid is the in-house templating engine created and maintained by Shopify. There are [many](https://www.developerdrive.com/best-javascript-templating-engines/) templating languages and 11ty supports them all.
 
 ### 1.4.3. Initial Setup
 
-Today were are building a simple multipage [static website](https://zealous-kilby-113356.netlify.com) with an [ajax connection](https://zealous-kilby-113356.netlify.com/posts/ajax/) that pulls articles from the New York Times.
+Today we're are building a simple multipage [static website](https://zealous-kilby-113356.netlify.com) with an [ajax connection](https://zealous-kilby-113356.netlify.com/posts/ajax/) that fetches articles from the New York Times.
 
-Create a git `.gitignore` file at the top level targeting the node_modules folder:
+Create a `.gitignore` file at the top level targeting the node_modules folder:
 
 ```sh
 node_modules
@@ -138,7 +136,7 @@ pageTitle: New York Today
 
 ## Articles
 
-A list of articles will apear here
+A list of articles will appear here
 ```
 
 Run `npm start` and open the localhost address in Chrome.
@@ -171,7 +169,7 @@ We will use `document.querySelector` and
 
 ```
 
-A list of articles will apear here
+A list of articles will appear here
 
 ```
 
@@ -265,7 +263,7 @@ We will use `document.querySelector` and
 </html>
 ```
 
-A list of articles will apear here
+A list of articles will appear here
 ````
 `````
 
@@ -817,8 +815,4 @@ Commit, merge and push the content to Github. Log in to [app.netlify.com](https:
 
 ## 1.9. Notes
 
-For more experience with 11ty, download the official 11ty blog template or, if you feel like a challenge and something fancier, try Villalobos' new [template](https://github.com/planetoftheweb/seven) or [Skeleventy](https://skeleventy.netlify.com/), or any of the starter files on the [11ty](https://www.11ty.io/docs/starter/) starter page.
-
-```
-
-```
+For more experience with 11ty try Andy Bell's [11ty](https://piccalil.li/course/learn-eleventy-from-scratch/) course.
