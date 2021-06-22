@@ -25,41 +25,49 @@
 
 ## 1.1. Homework
 
-- tbd
+- create your own New York Times developer account and use it to customize your Ajax page
 
 ## 1.2. Reading
 
 - watch this video on [Fetch](https://youtu.be/Oive66jrwBs)
-- create your own New York Times developer account and use it to customize your Ajax page
 
 ## 1.3. Goals
 
 - introduce static site generation (SSG) with eleventy (11ty)
 - introduce the Markdown language
 - use templates and markdown to generate a web site
-- introduce templating languages (Liquid)
+- introduce templating languages (Liquid) and YAML
 
 The [site we are creating](https://heuristic-morse-711174.netlify.app/).
 
 ## 1.4. Static Site Generation
 
-### 1.4.1. The Jamstack
+### 1.4.1. The JAMstack
 
 A "stack" is a collection of software used to solve a common problem. In web development common stacks include MEAN (MongoDB, ExpressJS, Angular and Node), MERN (MongoDB, ExpressJS, React and Node) and LAMP (Linux, Apache, MySQL, and PHP).
 
-The [JAMstack](https://jamstack.org/what-is-jamstack/) is an architecture that pre-renders pages and uses a build process to deploy them to a content delivery network.
+The [JAMstack](https://jamstack.org/what-is-jamstack/) is an architecture that uses a build process to create web pages and sites that are deployed to a content delivery network.
 
-In terms of the [design patterns](https://github.com/front-end-foundations/FlexNav#aside---design-patterns) we examined previously, JAMstack sites are the simplest and most traditional - static HTML pages
+Recall the [design patterns](https://github.com/front-end-foundations/FlexNav#aside---design-patterns) we examined previously. JAMstack sites are the simplest and most traditional - static HTML pages - but they way they are created is thoroughly modern.
 
 ### 1.4.2. Eleventy
 
-As we will learned, JAMstack sites use pre-rendering tools that use a build process to create the multiple pages that comprise a web site.
+As we just learned, JAMstack sites use pre-rendering tools that use a build process to create the multiple pages that comprise a web site.
 
-[Eleventy](https://www.11ty.io/) (aka 11ty) is a simple [static site generator](https://jamstack.org/generators/) (SSG). Static websites are very popular due to their simplicity, superior speed, SEO and security.
+[Eleventy](https://www.11ty.io/) (aka 11ty) is a simple [static site generator](https://jamstack.org/generators/) (SSG). Statically generated websites are very popular due to their simplicity, superior speed, SEO and security.
 
-Every generator uses a template processor - software designed to combine templates with data to output pages. The end result is a static website, made up of mainly HTML pages in folders. These folders and HTML pages can be hosted anywhere that allows you to put HTML pages on the internet.
+The benefits of 11ty over other completing generators include the fact that it is written in JavaScript (Node) and its simplicity. It uses templating engines to facilitate the flow of data.
 
-The benefits of 11ty over other completing generators include the fact that it is written in JavaScript and its simplicity. It uses a templating engine (we'll use [Liquid](https://shopify.github.io/liquid/)) under the hood to make pages. Liquid is the in-house templating engine created and maintained by Shopify. There are [many](https://www.developerdrive.com/best-javascript-templating-engines/) templating languages and 11ty supports them all.
+There are [many](https://www.developerdrive.com/best-javascript-templating-engines/) templating languages and 11ty supports them all:
+
+- [Pug](https://pugjs.org/api/getting-started.html)
+- [Handlebars](https://handlebarsjs.com)
+- [Moustache](https://github.com/janl/mustache.js/)
+- [Nunjucks](https://mozilla.github.io/nunjucks/)
+
+We'll use [Liquid](https://shopify.github.io/liquid/) today. Liquid is the in-house templating engine created and maintained by Shopify.
+
+If template languages is new to you don't worry, they are generally quite simple, resemble JavaScript and can be mastered easily.
 
 ### 1.4.3. Initial Setup
 
@@ -73,7 +81,7 @@ node_modules
 
 ```sh
 $ npm init -y
-$ npm install --save-dev @11ty/eleventy
+$ npm install @11ty/eleventy
 ```
 
 Add a script to `package.json`:
@@ -90,7 +98,7 @@ Note: since 11ty renders Markdown files we need to either delete the readme.md f
 
 [Reference](https://www.11ty.io/docs/layouts/)
 
-Create `_includes/layout.html` at the top level:
+Create `src/_includes/layout.html`:
 
 ```html
 <!DOCTYPE html>
@@ -116,27 +124,33 @@ Note the `{{ pageTitle }}` and `{{ content }}` template regions. Our content wil
 Add [passthroughs](https://www.11ty.dev/docs/copy/) for our static assets in an `.eleventy.js` file.
 
 ```js
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({ "static/css": "css" });
-  eleventyConfig.addPassthroughCopy({ "static/img": "img" });
-  eleventyConfig.addPassthroughCopy({ "static/js": "js" });
+module.exports = function (config) {
+  config.addPassthroughCopy("./src/css/");
+  config.addPassthroughCopy("./src/img/");
+  config.addPassthroughCopy("./src/js/");
 };
 ```
 
 This is our eleventy configuration file. It is a function that exports its contents for use by the Eleventy publishing system.
 
-<!-- ```js
-module.exports = config => {
+Add instructions for input and output folders:
+
+```js
+module.exports = function (config) {
+  config.addPassthroughCopy("./src/css/");
+  config.addPassthroughCopy("./src/img/");
+  config.addPassthroughCopy("./src/js/");
+
   return {
     dir: {
-      input: 'src',
-      output: 'dist'
-    }
+      input: "src",
+      output: "dist",
+    },
   };
 };
-``` -->
+```
 
-Create `index.md` on the top level with the following structure:
+Create `src/index.md` on the top level with the following structure:
 
 ```md
 ---
@@ -152,9 +166,9 @@ Run `npm start` and open the localhost address in Chrome.
 
 Note:
 
-- the generated `_site` folder
+- the generated `dist` folder
 - the conversion from markdown to html
-- the files specified in our config are copied into `_site`
+- the folders specified in our config are copied into `dist`
 
 Link the page to our template and add more content:
 
@@ -173,9 +187,9 @@ A list of articles will appear here
 
 The index file we created has been merged with `_includes/layout` because of the `layout: layout.html` front matter instruction.
 
-Now that the page is linked to our template it includes the `<h1>` tag referenced there `<h1>{{ pageTitle }}</h1>`.
+Now that the page is linked to our template - `layout.html` - it includes the `<h1>` tag referenced there `<h1>{{ pageTitle }}</h1>`.
 
-The template uses a templating language called [liquid](https://shopify.github.io/liquid/basics/introduction/) developed by Shopify. we will be using a handfull of these. 11ty supports many templating languages.
+`layout.html` uses a [liquid](https://shopify.github.io/liquid/basics/introduction/) snippet. We will be using a handful of these.
 
 Because the `_site` folder is generated by eleventy we can add it to our `.gitignore`.
 
@@ -183,7 +197,7 @@ Because the `_site` folder is generated by eleventy we can add it to our `.gitig
 
 [Markdown](https://www.markdownguide.org/getting-started/) is an extremely simple language used extensively in web development.
 
-It allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid HTML. Invented by [John Gruber](https://daringfireball.net/projects/markdown/) - it (or one of its many [flavors](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)) is ubiquitous in web publishing. This readme file is written in [markdown](https://www.markdownguide.org/basic-syntax#code).
+It allows you to create content using an easy-to-read, easy-to-write plain text format. It converts to structurally valid HTML. Invented by [John Gruber](https://daringfireball.net/projects/markdown/) - it (or one of its many [flavors](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)) is ubiquitous in web publishing. This readme file is written in [markdown](https://www.markdownguide.org/basic-syntax#code).
 
 Note: many of the conventions for Markdown arose from how people used email when it was confined to simple text documents, e.g. a bulleted list:
 
@@ -201,7 +215,7 @@ Note: many of the conventions for Markdown arose from how people used email when
 
 We wll create a collection of pages using [tags](https://www.11ty.io/docs/collections/) in our front matter.
 
-In `pages/about.md`:
+In a new page folder, `pages/about.md`:
 
 ```md
 ---
@@ -224,7 +238,7 @@ We are New Yorkers.
 
 Note:
 
-- the changes in the `_site` folder. Navigate to `http://localhost:8080/pages/about/`
+- the changes in the `_site` folder (navigate to `http://localhost:8080/pages/about/`)
 - the transformation of markdown to HTML (examine the HTML in dev tools)
 
 Create a navbar in `layout.html`:
@@ -306,6 +320,8 @@ images:
 [Home](/)
 ```
 
+Note the use of HTML in the Markdown file. This is common.
+
 Navigate to `http://localhost:8080/pages/pictures/`
 
 Link it to the template:
@@ -325,17 +341,13 @@ images:
 
 ### 1.7.1. Templating and Front Matter
 
-Recall, 11ty uses a templating software called Liquid by default. `{{ content }}` is a Liquid [object](https://shopify.github.io/liquid/basics/introduction/). If templating is new to you don't worry, it is generally quite simple and can be mastered easily.
+The material at the top between the `---`'s is commonly called [front matter](https://www.11ty.io/docs/data-frontmatter/) and uses [YAML](https://yaml.org/) (YAML Ain't Markup Language). YAML is typically used for processing instructions.
 
-There are many [templating languages](https://colorlib.com/wp/top-templating-engines-for-javascript/) besides Liquid (and 11ty supports most).
-
-The material at the top between the `---`'s is called [frontmatter](https://www.11ty.io/docs/data-frontmatter/) and uses `Yaml` (Yet Another Markup Language) syntax.
-
-#### 1.7.1.1. Collections
+#### 1.7.1.1. Tagged Collections
 
 [Collections](https://www.11ty.io/docs/collections/) use tags to group content.
 
-You can use multiple tags:
+Note: you can use multiple tags.
 
 ```md
 ---
@@ -346,19 +358,23 @@ tags:
   - contact
 navTitle: Contact
 ---
-
-## Here's how:
-
-- 917 865 5517
-
-[Home](/)
 ```
 
-Note: front matter tags can be written `tags: page` or `tags: [page]` if you need multiple tags use: `tags: [page, other]`. Here's the tagging [documentation](https://www.11ty.io/docs/collections/#tag-syntax).
+YAML front matter tags can be written
+
+`tags: page` or
+
+`tags: [page]`
+
+If you need multiple tags use: `tags: [page, other]`.
+
+Here's the tagging [documentation](https://www.11ty.io/docs/collections/#tag-syntax).
 
 #### 1.7.1.2. HTML and Markdown
 
-You can use HTML in a markdown file:
+As noted, you can use HTML in a markdown file.
+
+Change `contact.md`:
 
 ```html
 ---
@@ -372,9 +388,9 @@ navTitle: Contact
 
 <ul>
   <li>917 865 5517</li>
-
-  <a href="/">Home</a>
 </ul>
+
+<a href="/">Home</a>
 ```
 
 You can use HTML files alongside markdown.
@@ -390,7 +406,7 @@ Create `pages/pages.json`:
 ```js
 {
 	"layout": "layout.html",
-	"tags": ["pages", "nav"]
+	"tags": ["page", "nav"]
 }
 
 ```
@@ -416,9 +432,11 @@ We are New Yorkers.
 [Home](/)
 ```
 
+Perform the same deletions on all files in `pages`.
+
 Let's use the `page` collection to display all the posts.
 
-In `index.html` :
+In `index.md` :
 
 ```md
 ---
@@ -440,10 +458,10 @@ tags:
 
 Note: the `|` character in `post.date | date: "%Y-%m-%d"` is a filter. There are quite a number of [available filters](https://help.shopify.com/en/themes/liquid/filters) for example: `upcase`:
 
-```
+```html
 {% for page in collections.page %}
-  <h2><a href="{{ page.url }}">{{ page.data.pageTitle | upcase }}</a></h2>
-  <em>{{ page.date | date: "%Y-%m-%d" }}</em>
+<h2><a href="{{ page.url }}">{{ page.data.pageTitle | upcase }}</a></h2>
+<em>{{ page.date | date: "%Y-%m-%d" }}</em>
 {% endfor %}
 ```
 
