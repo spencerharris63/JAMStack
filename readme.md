@@ -1,37 +1,14 @@
-# 1. The JAMStack, AJAX and Static Site Generation
+# The JAMStack, AJAX and Static Site Generation
 
-- [1. The JAMStack, AJAX and Static Site Generation](#1-the-jamstack-ajax-and-static-site-generation)
-  - [1.1. Homework](#11-homework)
-  - [1.2. Reading](#12-reading)
-  - [1.3. Goals](#13-goals)
-  - [1.4. Static Site Generation](#14-static-site-generation)
-    - [1.4.1. The Jamstack](#141-the-jamstack)
-    - [1.4.2. Eleventy](#142-eleventy)
-    - [1.4.3. Initial Setup](#143-initial-setup)
-    - [1.4.4. Create a Layout Template](#144-create-a-layout-template)
-    - [1.6.1. Markdown](#161-markdown)
-    - [1.6.2. Create a Collection](#162-create-a-collection)
-    - [1.7.1. Templating and Front Matter](#171-templating-and-front-matter)
-      - [1.7.1.1. Collections](#1711-collections)
-      - [1.7.1.2. HTML and Markdown](#1712-html-and-markdown)
-    - [1.7.2. Simplify the Posts Collection](#172-simplify-the-posts-collection)
-    - [1.7.3. Commit and Deploy](#173-commit-and-deploy)
-  - [1.8. Ajax](#18-ajax)
-    - [1.8.1. Fetch](#181-fetch)
-    - [1.8.2. Rest API](#182-rest-api)
-    - [1.8.3. Looping](#183-looping)
-    - [1.8.4. Second Deploy](#184-second-deploy)
-  - [1.9. Notes](#19-notes)
-
-## 1.1. Homework
+## Homework
 
 - create your own New York Times developer account and use it to customize your Ajax page
 
-## 1.2. Reading
+## Reading
 
 - watch this video on [Fetch](https://youtu.be/Oive66jrwBs)
 
-## 1.3. Goals
+## Goals
 
 - introduce static site generation (SSG) with eleventy (11ty)
 - introduce the Markdown language
@@ -40,9 +17,9 @@
 
 The [site we are creating](https://heuristic-morse-711174.netlify.app/).
 
-## 1.4. Static Site Generation
+## Static Site Generation
 
-### 1.4.1. The JAMstack
+### The JAMstack
 
 A "stack" is a collection of software used to solve a common problem. In web development common stacks include MEAN (MongoDB, ExpressJS, Angular and Node), MERN (MongoDB, ExpressJS, React and Node) and LAMP (Linux, Apache, MySQL, and PHP).
 
@@ -50,7 +27,7 @@ The [JAMstack](https://jamstack.org/what-is-jamstack/) is an architecture that u
 
 Recall the [design patterns](https://github.com/front-end-foundations/FlexNav#aside---design-patterns) we examined previously. JAMstack sites are the simplest and most traditional - static HTML pages - but they way they are created is thoroughly modern.
 
-### 1.4.2. Eleventy
+### Eleventy
 
 As we just learned, JAMstack sites use pre-rendering tools that use a build process to create the multiple pages that comprise a web site.
 
@@ -69,7 +46,7 @@ We'll use [Liquid](https://shopify.github.io/liquid/) today. Liquid is the in-ho
 
 If template languages is new to you don't worry, they are generally quite simple, resemble JavaScript and can be mastered easily.
 
-### 1.4.3. Initial Setup
+### Initial Setup
 
 Today we're are building a simple multipage [static website](https://zealous-kilby-113356.netlify.com) with an [ajax connection](https://zealous-kilby-113356.netlify.com/posts/ajax/) that fetches articles from the New York Times.
 
@@ -94,7 +71,7 @@ Add a script to `package.json`:
 
 Note: since 11ty renders Markdown files we need to either delete the readme.md file in this repo or create an `.eleventyignore` file with the contents `readme.md`. Here's the [documentation](https://www.11ty.dev/docs/ignores/) for Eleventy ignore files.
 
-### 1.4.4. Create a Layout Template
+### Create a Layout Template
 
 [Reference](https://www.11ty.io/docs/layouts/)
 
@@ -301,17 +278,68 @@ navTitle: Contact
 [Home](/)
 ```
 
+<!-- SUMMER 2021 HERE -->
+
 And `pictures.md`:
 
 ```md
 ---
 pageTitle: Apples
 navTitle: Pictures
+singleImage: /img/apples.png
+---
+
+![alt info goes here]( {{ singleImage }})
+
+[Home](/)
+```
+
+Link it to the template, add a tag and multiple images:
+
+```md
+---
+layout: layout.html
+pageTitle: Apples
+navTitle: Pictures
+tags: page
+singleImage: /img/apples.png
 images:
   - apples.png
   - apples-red.png
   - apples-group.png
 ---
+```
+
+Examine the image options:
+
+```md
+---
+layout: layout.html
+pageTitle: Apples
+navTitle: Pictures
+tags: page
+singleImage: /img/apples.png
+images:
+  - apples.png
+  - apples-red.png
+  - apples-group.png
+---
+
+## Markdown, single image:
+
+![alt info goes here]( {{ singleImage }})
+
+## HTML, single image:
+
+<img src="{{ singleImage }}" alt="info goes here" style="transform: scale(50%) rotate(20deg);" />
+
+## Markdown for loop:
+
+{% for filename in images %}
+![alt info goes here](/img/{{ filename }})
+{% endfor %}
+
+## Liquid for loop:
 
 {% for filename in images %}
 <img src="/img/{{ filename }}" alt="A nice picture of apples." />
@@ -320,30 +348,58 @@ images:
 [Home](/)
 ```
 
-Note the use of HTML in the Markdown file. This is common.
+Note the use of HTML in the Markdown file.
 
 Navigate to `http://localhost:8080/pages/pictures/`
 
-Link it to the template:
+We can use the front matter to define a class for this page.
 
-```md
----
-layout: layout.html
-pageTitle: Apples
-navTitle: Pictures
-tags: page
-images:
-  - apples.png
-  - apples-red.png
-  - apples-group.png
----
+Add the following to the `pictures.md` front matter:
+
+```txt
+pageClass: pictures
 ```
 
-### 1.7.1. Templating and Front Matter
+Add the following to the template's body tag:
+
+```html
+<body class="{{ pageClass }}"></body>
+```
+
+Now we can address any element on the page using our style sheet:
+
+```css
+.pictures img {
+  max-width: 50%;
+}
+` .pictures h1 {
+  color: rgb(11, 123, 11);
+}
+```
+
+### Data Folder
+
+11ty allows you to create a `_data` folder which can then be used to store any information you need for your site.
+
+Create a `_data` folder in `src` and add the following json:
+
+```js
+{
+  "siteTitle": "My first 11ty Site"
+}
+```
+
+Then use it in your template:
+
+```html
+<title>{{site.name}}</title>
+```
+
+### Templating and Front Matter
 
 The material at the top between the `---`'s is commonly called [front matter](https://www.11ty.io/docs/data-frontmatter/) and uses [YAML](https://yaml.org/) (YAML Ain't Markup Language). YAML is typically used for processing instructions.
 
-#### 1.7.1.1. Tagged Collections
+#### Tagged Collections
 
 [Collections](https://www.11ty.io/docs/collections/) use tags to group content.
 
@@ -370,7 +426,7 @@ If you need multiple tags use: `tags: [page, other]`.
 
 Here's the tagging [documentation](https://www.11ty.io/docs/collections/#tag-syntax).
 
-#### 1.7.1.2. HTML and Markdown
+#### HTML and Markdown
 
 As noted, you can use HTML in a markdown file.
 
@@ -397,7 +453,9 @@ You can use HTML files alongside markdown.
 
 Change the name of `contact.md` to `contact.html`.
 
-### 1.7.2. Simplify the Posts Collection
+### Simplify the Posts Collection
+
+You can use json to simplify data management.
 
 We will add additional tags that can be used to reorganize content.
 
@@ -442,9 +500,8 @@ In `index.md` :
 ---
 layout: layout.html
 pageTitle: New York Today
+tags: page
 navTitle: Home
-tags:
-  - page
 ---
 
 ## Articles
@@ -456,7 +513,9 @@ tags:
 {% endfor %}
 ```
 
-Note: the `|` character in `post.date | date: "%Y-%m-%d"` is a filter. There are quite a number of [available filters](https://help.shopify.com/en/themes/liquid/filters) for example: `upcase`:
+Note: the `|` character in `post.date | date: "%Y-%m-%d"` is a filter.
+
+There are quite a number of [available filters](https://help.shopify.com/en/themes/liquid/filters) for example: `upcase`:
 
 ```html
 {% for page in collections.page %}
@@ -465,7 +524,7 @@ Note: the `|` character in `post.date | date: "%Y-%m-%d"` is a filter. There are
 {% endfor %}
 ```
 
-### 1.7.3. Commit and Deploy
+### Commit and Deploy
 
 Commit your changes, merge them into the main branch and push your site to a new Github repository.
 
@@ -473,7 +532,7 @@ Sign into Netlify and create a new site from Git. Check the settings to ensure t
 
 Examine the deploy logs. Note that Netlify will download and install 11ty in order to generate your `_site` folder.
 
-## 1.8. Ajax
+## Ajax
 
 Ajax allows you to get data from your own or another's service. Web services expose data in the form of an API which allows you to get, delete, update or create data via [routes](http://jsonplaceholder.typicode.com/).
 
@@ -481,13 +540,15 @@ Today, we will get data from the New York Times and display it on our home page.
 
 Edit `index.md` in VS Code:
 
-```html
+```md
 ---
 layout: layout.html
 pageTitle: New York Today
 ---
 
-## Articles {% for page in collections.page %}
+## Articles
+
+{% for page in collections.page %}
 
 <h2><a href="{{ page.url }}">{{ page.data.pageTitle | upcase }}</a></h2>
 <em>{{ page.date | date: "%Y-%m-%d" }}</em>
@@ -609,6 +670,57 @@ Note:
 - `data[1]` - we use `[1]` to get the second entry
 - `data[1].body` - we use `.` notation to access just one of the properties of the entry
 
+<!--
+document.querySelector(".stories").innerText = data; WONT WORK
+
+Quick tour of the NETWORK PANEL
+
+```
+function showData(data) {
+  console.log(data);
+
+  for (let i = 0; i < data.length; i++) {
+    console.log("foo::", i, data[i]);
+  }
+
+  document.querySelector(".stories").innerText = data;
+}
+```
+
+```
+function showData(data) {
+  console.log(data);
+
+  let content = "";
+
+  for (let i = 0; i < data.length; i++) {
+    console.log("foo::", i, data[i]);
+    content += data[i].title;
+  }
+
+  document.querySelector(".stories").innerText = content;
+}
+```
+
+```
+  for (let i = 0; i < data.length; i++) {
+    console.log("foo::", i, data[i]);
+    content += `<h3>${data[i].title}</h3>`;
+  }
+```
+innerHTML
+
+```
+  for (let i = 0; i < data.length; i++) {
+    console.log("foo::", i, data[i]);
+    content += `<h3>${data[i].title}</h3><p>${data[i].body}</p>`;
+  }
+```
+
+-->
+
+## New York Times API
+
 Let's use the New York Times [developers](https://developer.nytimes.com/) site for our data.
 
 ```js
@@ -643,7 +755,6 @@ function showData(data) {
 ```js
 document.addEventListener("click", clickHandlers);
 
-// store the link plus the API key in a variable
 var API =
   "https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=uQG4jhIEHKHKm0qMKGcTHqUgAolr1GM0";
 
@@ -780,7 +891,7 @@ pageTitle: New York Today
 <div class="stories"></div>
 ```
 
-And the script's dependancy on it:
+And the script's dependency on it:
 
 ```js
 var API =
@@ -817,10 +928,3 @@ Commit, merge and push the content to Github. Log in to [app.netlify.com](https:
 ## 1.9. Notes
 
 For more experience with 11ty try Andy Bell's [11ty](https://piccalil.li/course/learn-eleventy-from-scratch/) course.
-
-````
-
-```
-
-```
-````
