@@ -921,6 +921,32 @@ function showData(stories) {
 getStories();
 ```
 
+Add elements from the API:
+
+```js
+function showData(stories) {
+  var looped = stories
+    .map(
+      (story) => `
+    <div class="item">
+    <picture>
+    <img src="${story.multimedia[2].url}" alt="" />
+    <caption>${story.multimedia[2].caption}</caption>
+    </picture>
+      <h3><a href="${story.url}">${story.title}</a></h3>
+      <p>${story.abstract}</p>
+    </div>
+  `
+    )
+    .join("");
+
+  document.querySelector(".stories").innerHTML = looped;
+}
+```
+
+[MDN picture element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture)
+
+
 ### 1.8.4. Second Deploy
 
 Commit, merge and push the content to Github. Log in to [app.netlify.com](https://app.netlify.com) and ensure that the deploy has succeeded.
