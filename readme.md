@@ -946,6 +946,29 @@ function showData(stories) {
 
 [MDN picture element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture)
 
+The script will error on all pages other than the home page.
+
+Add a page class and make getStories run only when that class is present on the page.
+
+```md
+---
+layout: layout.html
+pageTitle: New York Today
+pageClass: home
+---
+
+## Articles
+
+<div class="stories">Loading...</div>
+```
+
+```js
+if (document.querySelector(".home")) {
+  getStories();
+}
+
+```
+
 
 ### 1.8.4. Second Deploy
 
