@@ -44,7 +44,7 @@ There are [many](https://www.developerdrive.com/best-javascript-templating-engin
 
 We'll use [Liquid](https://shopify.github.io/liquid/) today. Liquid is the in-house templating engine created and maintained by Shopify.
 
-If template languages is new to you don't worry, they are generally quite simple, resemble JavaScript and can be mastered easily.
+If template languages are new to you don't worry, they are generally quite simple, resemble JavaScript and can be mastered easily.
 
 ### Initial Setup
 
@@ -333,13 +333,13 @@ images:
 
 <img src="{{ singleImage }}" alt="info goes here" style="transform: scale(50%) rotate(20deg);" />
 
-## Markdown for loop:
+## Markdown in Liquid for loop:
 
 {% for filename in images %}
 ![alt info goes here](/img/{{ filename }})
 {% endfor %}
 
-## Liquid for loop:
+## HTML in Liquid for loop:
 
 {% for filename in images %}
 <img src="/img/{{ filename }}" alt="A nice picture of apples." />
@@ -372,16 +372,16 @@ Now we can address any element on the page using our style sheet:
 .pictures img {
   max-width: 50%;
 }
-` .pictures h1 {
+.pictures h1 {
   color: rgb(11, 123, 11);
 }
 ```
 
 ### Data Folder
 
-11ty allows you to create a `_data` folder which can then be used to store any information you need for your site.
+11ty allows you to create a `_data` folder which can then be used to store information you need for your site.
 
-Create a `_data` folder in `src` and add the following json:
+Create a `_data` folder in `src` and add `site.json` with the following json:
 
 ```js
 {
@@ -392,7 +392,7 @@ Create a `_data` folder in `src` and add the following json:
 Then use it in your template:
 
 ```html
-<title>{{site.name}}</title>
+<title>{{site.siteTitle}}</title>
 ```
 
 ### Templating and Front Matter
@@ -534,7 +534,7 @@ Examine the deploy logs. Note that Netlify will download and install 11ty in ord
 
 ## Ajax
 
-Ajax allows you to get data from your own or another's service. Web services expose data in the form of an API which allows you to get, delete, update or create data via [routes](http://jsonplaceholder.typicode.com/).
+Ajax allows you to get data from your own or another's service. Web services expose data in the form of an API which allow you to get, delete, update or create data via [routes](http://jsonplaceholder.typicode.com/).
 
 Today, we will get data from the New York Times and display it on our home page.
 
@@ -547,12 +547,6 @@ pageTitle: New York Today
 ---
 
 ## Articles
-
-{% for page in collections.page %}
-
-<h2><a href="{{ page.url }}">{{ page.data.pageTitle | upcase }}</a></h2>
-<em>{{ page.date | date: "%Y-%m-%d" }}</em>
-{% endfor %}
 
 <button>Show Stories</button>
 ```
@@ -581,7 +575,7 @@ _API_ stands for [Application Programming Interface](https://medium.freecodecamp
 
 ### 1.8.2. Rest API
 
-We need data we can fetch from the internet. We'll start with the [Typicode](http://jsonplaceholder.typicode.com/) play ground. Note that you can do more than just get data, you can also post, create, delete and update data. Together these functions are often refered to a `CRUD`.
+We need data we can fetch from the internet. We'll start with the [Typicode](http://jsonplaceholder.typicode.com/) play ground. Note that you can do more than just get data, you can also post, create, delete and update data. Together these functions are often refered to as `CRUD`.
 
 Open a console in the browser.
 
@@ -603,6 +597,12 @@ Since the promise is resolved you can see the actual data in the console. It ret
 fetch('https://jsonplaceholder.typicode.com/posts/')
   .then(response => response.json())
   .then(json => console.log(json))
+```
+
+```sh
+fetch('https://jsonplaceholder.typicode.com/posts/')
+  .then(response => response.json())
+  .then(json => console.log( json.map( item => `<h2>${item.title}</h2>` )))
 ```
 
 You can see the same data if you travel to `https://jsonplaceholder.typicode.com/posts/` in a new tab. Try [other resources](http://jsonplaceholder.typicode.com/) such as comments or photos.
@@ -668,9 +668,9 @@ Note:
 
 - `document.querySelector(".stories")` - targets an empty div
 - `data[1]` - we use `[1]` to get the second entry
-- `data[1].body` - we use `.` notation to access just one of the properties of the entry
+- `data[1].body` - we use dot notation to access just one of the properties of the object
 
-<!--
+
 document.querySelector(".stories").innerText = data; WONT WORK
 
 Quick tour of the NETWORK PANEL
@@ -708,7 +708,8 @@ function showData(data) {
     content += `<h3>${data[i].title}</h3>`;
   }
 ```
-innerHTML
+
+Use `innerHTML`: `document.querySelector(".stories").innerHTML = content;`
 
 ```
   for (let i = 0; i < data.length; i++) {
@@ -716,8 +717,6 @@ innerHTML
     content += `<h3>${data[i].title}</h3><p>${data[i].body}</p>`;
   }
 ```
-
--->
 
 ## New York Times API
 
@@ -977,3 +976,55 @@ Commit, merge and push the content to Github. Log in to [app.netlify.com](https:
 ## 1.9. Notes
 
 For more experience with 11ty try Andy Bell's [11ty](https://piccalil.li/course/learn-eleventy-from-scratch/) course.
+
+### Create a blog (`pages/blog.md`):
+
+```md
+---
+pageTitle: Blog
+navTitle: Blog
+---
+
+## My Blog
+
+{% for post in collections.post %}
+
+<h2><a href="{{ post.url }}">{{ post.data.pageTitle }}</a></h2>
+<em>{{ post.date | date: "%Y-%m-%d" }}</em>
+{% endfor %}
+```
+
+`src/posts/posts.json`:
+
+```js
+{
+  "layout": "layout.html",
+  "tags": ["post"]
+}
+```
+
+Dogs:
+
+```md
+---
+pageTitle: Dogs
+---
+
+## Dawgs
+
+![Cute!](https://place-puppy.com/300x300)
+```
+
+Cats:
+
+```md
+---
+pageTitle: Cats
+---
+
+## Cats
+
+![Cute!](http://placekitten.com/200/300)
+```
+
+Generate pages from the NYT feed
