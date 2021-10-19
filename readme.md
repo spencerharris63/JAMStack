@@ -1029,7 +1029,7 @@ pageTitle: Cats
 
 ## Generate pages from the NYT feed
 
-# Adding rendered articles
+Adding rendered articles
 
 `$ npm i node-fetch`
 
@@ -1051,21 +1051,6 @@ module.exports = function () {
 };
 ```
 
-`/src/pages/articles.md`
-
-```md
----
-pageTitle: Articles
-navTitle: Articles
----
-
-## Articles from file system
-
-{% for article in articles %}
-
-<p><a href="/article/{{ article.title | slug }}/">{{ article.title }}</a></p>
-{% endfor %}
-```
 
 `/src/articles.liquid`
 
@@ -1086,3 +1071,20 @@ permalink: "article/{{ article.title | slug }}/"
 <p>{{ article.abstract }}</p>
 
 ```
+
+`/src/pages/articles.md`
+
+```md
+---
+pageTitle: Articles
+navTitle: Articles
+---
+
+## Articles from file system
+
+{% for article in articles %}
+
+<p><a href="/article/{{ article.title | slug }}/">{{ article.title }}</a></p>
+{% endfor %}
+```
+
