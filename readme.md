@@ -88,10 +88,10 @@ Create `src/_includes/layout.html`:
     <title>My Blog</title>
   </head>
   <body>
-    <div class="content">
+    <main tabindex="-1" class="content">
       <h1>{{ pageTitle }}</h1>
       {{ content }}
-    </div>
+    </main>
   </body>
 </html>
 ```
@@ -221,7 +221,7 @@ Note:
 Create a navbar in `layout.html`:
 
 ```html
-<nav>
+<nav aria-label="Primary navigaton">
   <ul>
     {% for page in collections.page %}
     <li>{{ page.data.navTitle }}</li>
