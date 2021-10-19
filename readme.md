@@ -1027,4 +1027,62 @@ pageTitle: Cats
 ![Cute!](http://placekitten.com/200/300)
 ```
 
-Generate pages from the NYT feed
+## Generate pages from the NYT feed
+
+# Adding rendered articles
+
+`$ npm i node-fetch`
+
+`/_data/articles.js`
+
+```js
+const fetch = require("node-fetch");
+
+API =
+  "https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=uQG4jhIEHKHKm0qMKGcTHqUgAolr1GM0";
+
+module.exports = function () {
+  return new Promise((resolve, reject) => {
+    fetch(API)
+      .then((response) => response.json())
+      .then((data) => resolve(data.results))
+      .catch((e) => reject(e));
+  });
+};
+```
+
+`/src/pages/articles.md`
+
+```md
+---
+pageTitle: Articles
+navTitle: Articles
+---
+
+## Articles from file system
+
+{% for article in articles %}
+
+<p><a href="/article/{{ article.title | slug }}/">{{ article.title }}</a></p>
+{% endfor %}
+```
+
+`/src/articles.liquid`
+
+```
+---
+tags: articles
+layout: layout.html
+
+pagination:
+    data: articles
+    size: 1
+    alias: article
+permalink: "article/{{ article.title | slug }}/"
+---
+
+<h2>{{ article.title }} </h2>
+
+<p>{{ article.abstract }}</p>
+
+```
