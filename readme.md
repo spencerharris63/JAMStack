@@ -727,7 +727,7 @@ document.addEventListener("click", clickHandlers);
 
 // store the link plus the API key in a variable
 var API =
-  "https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=uQG4jhIEHKHKm0qMKGcTHqUgAolr1GM0";
+  "https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=RuG9N6lD1Xss81PdRbmhuiJHjuiPEt6R";
 
 function clickHandlers(event) {
   if (!event.target.matches("button")) return;
@@ -755,7 +755,7 @@ function showData(data) {
 document.addEventListener("click", clickHandlers);
 
 var API =
-  "https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=uQG4jhIEHKHKm0qMKGcTHqUgAolr1GM0";
+  "https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=RuG9N6lD1Xss81PdRbmhuiJHjuiPEt6R";
 
 function clickHandlers(event) {
   if (!event.target.matches("button")) return;
@@ -806,7 +806,7 @@ Here's the script so far:
 document.addEventListener("click", clickHandlers);
 
 var API =
-  "https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=uQG4jhIEHKHKm0qMKGcTHqUgAolr1GM0";
+  "https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=RuG9N6lD1Xss81PdRbmhuiJHjuiPEt6R";
 
 function clickHandlers(event) {
   if (!event.target.matches("button")) return;
@@ -836,7 +836,7 @@ An alternative method might use the `map()` method on the array:
 document.addEventListener("click", clickHandlers);
 
 var API =
-  "https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=uQG4jhIEHKHKm0qMKGcTHqUgAolr1GM0";
+  "https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=RuG9N6lD1Xss81PdRbmhuiJHjuiPEt6R";
 
 function clickHandlers(event) {
   if (!event.target.matches("button")) return;
@@ -894,7 +894,7 @@ And the script's dependency on it:
 
 ```js
 var API =
-  "https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=uQG4jhIEHKHKm0qMKGcTHqUgAolr1GM0";
+  "https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=RuG9N6lD1Xss81PdRbmhuiJHjuiPEt6R";
 
 function getStories(event) {
   fetch(API)
@@ -1039,7 +1039,7 @@ Adding rendered articles
 const fetch = require("node-fetch");
 
 API =
-  "https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=uQG4jhIEHKHKm0qMKGcTHqUgAolr1GM0";
+  "https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=RuG9N6lD1Xss81PdRbmhuiJHjuiPEt6R";
 
 module.exports = function () {
   return new Promise((resolve, reject) => {
