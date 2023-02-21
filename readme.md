@@ -71,6 +71,17 @@ Add a script to `package.json`:
 
 Note: since 11ty renders Markdown files we need to either delete the readme.md file in this repo or create an `.eleventyignore` file with the contents `readme.md`. Here's the [documentation](https://www.11ty.dev/docs/ignores/) for Eleventy ignore files.
 
+Note the `.prettierignore`:
+
+```
+# Ignore artifacts:
+build
+coverage
+
+# Ignore all readme files:
+readme.md
+```
+
 ### Create a Layout Template
 
 [Reference](https://www.11ty.io/docs/layouts/)
