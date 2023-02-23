@@ -7,6 +7,7 @@
 ## Reading
 
 - watch this video on [Fetch](https://youtu.be/Oive66jrwBs)
+- watch this video on [Eleventy](https://11ty.rocks)
 
 ## Goals
 
@@ -189,20 +190,16 @@ It allows you to create content using an easy-to-read, easy-to-write plain text 
 Note: many of the conventions for Markdown arose from how people used email when it was confined to simple text documents, e.g. a bulleted list:
 
 ```txt
-* item one
-* item two
-* item three
-```
-
 - item one
 - item two
 - item three
+```
 
 ### 1.6.2. Create a Collection
 
 We wll create a collection of pages using [tags](https://www.11ty.io/docs/collections/) in our front matter.
 
-In a new page folder, `pages/about.md`:
+In a new pages folder, `pages/about.md`:
 
 ```md
 ---
@@ -461,6 +458,8 @@ You can use HTML files alongside markdown.
 
 Change the name of `contact.md` to `contact.html`.
 
+Note that you cannot use markdown in an HTML file.
+
 ### Simplify the Posts Collection
 
 You can use json to simplify data management.
@@ -538,7 +537,7 @@ Commit your changes, merge them into the main branch and push your site to a new
 
 Sign into Netlify and create a new site from Git. Check the settings to ensure that Netlify has auto detected 11ty and deploy the site.
 
-Examine the deploy logs. Note that Netlify will download and install 11ty in order to generate your `_site` folder.
+Examine the deploy logs. Note that Netlify will download and install 11ty in order to generate your `dist` folder and deploy that folder to a web server.
 
 ## Ajax
 
