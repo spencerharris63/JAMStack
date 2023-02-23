@@ -1,0 +1,2056 @@
+{
+  "results": [
+    {
+      "section": "",
+      "subsection": "",
+      "title": "",
+      "abstract": "",
+      "url": "",
+      "uri": "nyt://promo/4981fd7b-c61a-5b95-bb73-aaf8d10c8484",
+      "byline": "",
+      "item_type": "Promo",
+      "updated_date": "2023-02-22T14:05:45-05:00",
+      "created_date": "2023-02-22T05:29:13-05:00",
+      "published_date": "2023-02-22T05:29:13-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [],
+      "org_facet": [],
+      "per_facet": [],
+      "geo_facet": [],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22ukraine-blog-header-2am-lvtb/22ukraine-blog-header-2am-lvtb-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1365,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Ukrainian soldiers at a position near the front line in eastern Ukraine on Tuesday.",
+          "copyright": "Tyler Hicks/The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22ukraine-blog-header-2am-lvtb/22ukraine-blog-header-2am-lvtb-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Ukrainian soldiers at a position near the front line in eastern Ukraine on Tuesday.",
+          "copyright": "Tyler Hicks/The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22ukraine-blog-header-2am-lvtb/22ukraine-blog-header-2am-lvtb-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Ukrainian soldiers at a position near the front line in eastern Ukraine on Tuesday.",
+          "copyright": "Tyler Hicks/The New York Times"
+        }
+      ],
+      "short_url": ""
+    },
+    {
+      "section": "world",
+      "subsection": "europe",
+      "title": "How Poland, Long Leery of Foreigners, Opened Up to Ukrainians",
+      "abstract": "The country, once one of the world’s most ethnically and culturally homogeneous, has accommodated far more refugees from neighboring Ukraine than any other nation.",
+      "url": "https://www.nytimes.com/2023/02/22/world/europe/poland-ukraine-war-refugees.html",
+      "uri": "nyt://article/9f53ec0a-f1f0-5cee-9f4e-cb2061477fb3",
+      "byline": "By Andrew Higgins",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T10:51:17-05:00",
+      "created_date": "2023-02-22T06:02:01-05:00",
+      "published_date": "2023-02-22T06:02:01-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Russian Invasion of Ukraine (2022)",
+        "Refugees and Displaced Persons",
+        "Politics and Government"
+      ],
+      "org_facet": [],
+      "per_facet": [],
+      "geo_facet": ["Ukraine", "Poland", "Wroclaw (Poland)"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21poland-refugees-01-zghw/21poland-refugees-01-zghw-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1366,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "The Goncharuk family arrived in Wroclaw, Poland, from Kharkiv, Ukraine. They live in a single room at a former college dormitory.",
+          "copyright": "Maciek Nabrdalik for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21poland-refugees-01-zghw/21poland-refugees-01-zghw-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "The Goncharuk family arrived in Wroclaw, Poland, from Kharkiv, Ukraine. They live in a single room at a former college dormitory.",
+          "copyright": "Maciek Nabrdalik for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21poland-refugees-01-zghw/21poland-refugees-01-zghw-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "The Goncharuk family arrived in Wroclaw, Poland, from Kharkiv, Ukraine. They live in a single room at a former college dormitory.",
+          "copyright": "Maciek Nabrdalik for The New York Times"
+        }
+      ],
+      "short_url": "https://nyti.ms/3YQWv1e"
+    },
+    {
+      "section": "world",
+      "subsection": "middleeast",
+      "title": "At Least 10 Palestinians Killed During Israeli Raid in West Bank",
+      "abstract": "An hourslong gunfight broke out between Israeli soldiers and Palestinian gunmen during an Israeli operation to arrest Palestinian fighters. The violence left the region braced for further unrest.",
+      "url": "https://www.nytimes.com/2023/02/22/world/middleeast/west-bank-nablus-palestinians-killed.html",
+      "uri": "nyt://article/29074816-2086-5c75-9889-d499f4bd1571",
+      "byline": "By Patrick Kingsley",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T13:26:26-05:00",
+      "created_date": "2023-02-22T07:56:50-05:00",
+      "published_date": "2023-02-22T07:56:50-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": ["Palestinians", "Defense and Military Forces"],
+      "org_facet": [],
+      "per_facet": [],
+      "geo_facet": ["Nablus (West Bank)", "Israel"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22westbank-hgqk/22westbank-hgqk-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1365,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "The West Bank city of Nablus on Wednesday. Hamas, the Islamist group that controls the Gaza Strip, warned that the killings would not pass “without a response.”",
+          "copyright": "Majdi Mohammed/Associated Press"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22westbank-hgqk/22westbank-hgqk-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "The West Bank city of Nablus on Wednesday. Hamas, the Islamist group that controls the Gaza Strip, warned that the killings would not pass “without a response.”",
+          "copyright": "Majdi Mohammed/Associated Press"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22westbank-hgqk/22westbank-hgqk-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "The West Bank city of Nablus on Wednesday. Hamas, the Islamist group that controls the Gaza Strip, warned that the killings would not pass “without a response.”",
+          "copyright": "Majdi Mohammed/Associated Press"
+        }
+      ],
+      "short_url": "https://nyti.ms/3krMacS"
+    },
+    {
+      "section": "world",
+      "subsection": "asia",
+      "title": "South Korea Inches Toward Same-Sex Equality, but Broader Bill Is Stalled",
+      "abstract": "Christian conservatives in the country have campaigned tirelessly for decades to prevent legislation that would offer protections to L.G.B.T.Q. people.",
+      "url": "https://www.nytimes.com/2023/02/22/world/asia/south-korea-lgbtq-law.html",
+      "uri": "nyt://article/909268d8-b94f-5928-833d-d6822ccfd3d9",
+      "byline": "By John Yoon",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T00:04:35-05:00",
+      "created_date": "2023-02-22T00:04:35-05:00",
+      "published_date": "2023-02-22T00:04:35-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Discrimination",
+        "Homosexuality and Bisexuality",
+        "Law and Legislation",
+        "Politics and Government",
+        "Transgender and Transsexuals",
+        "Same-Sex Marriage, Civil Unions and Domestic Partnerships",
+        "Christians and Christianity",
+        "Conservatism (US Politics)",
+        "Legislatures and Parliaments"
+      ],
+      "org_facet": ["People Power Party"],
+      "per_facet": [],
+      "geo_facet": ["South Korea"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/16/multimedia/00skorea-lgbtq-01-bzhj/00skorea-lgbtq-01-bzhj-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1365,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Seoul City Hall Plaza during a Pride event in 2022. A bill that would protect sexual minorities against discrimination has encountered fierce opposition in South Korea.",
+          "copyright": "Anthony Wallace/Agence France-Presse — Getty Images"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/16/multimedia/00skorea-lgbtq-01-bzhj/00skorea-lgbtq-01-bzhj-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Seoul City Hall Plaza during a Pride event in 2022. A bill that would protect sexual minorities against discrimination has encountered fierce opposition in South Korea.",
+          "copyright": "Anthony Wallace/Agence France-Presse — Getty Images"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/16/multimedia/00skorea-lgbtq-01-bzhj/00skorea-lgbtq-01-bzhj-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Seoul City Hall Plaza during a Pride event in 2022. A bill that would protect sexual minorities against discrimination has encountered fierce opposition in South Korea.",
+          "copyright": "Anthony Wallace/Agence France-Presse — Getty Images"
+        }
+      ],
+      "short_url": "https://nyti.ms/3KuRBTg"
+    },
+    {
+      "section": "world",
+      "subsection": "europe",
+      "title": "U.K. Court Upholds Ruling Stripping Shamima Begum’s Citizenship",
+      "abstract": "Ms. Begum was one of three teenage girls from London who traveled to Syria in 2015 to join the Islamic State.",
+      "url": "https://www.nytimes.com/2023/02/22/world/europe/shamima-begum-uk-citizenship-isis.html",
+      "uri": "nyt://article/ac5fadef-c253-5d9a-9bf8-a01b1c9ef8f5",
+      "byline": "By Megan Specia",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T08:53:37-05:00",
+      "created_date": "2023-02-22T05:29:20-05:00",
+      "published_date": "2023-02-22T05:29:20-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Terrorism",
+        "Citizenship and Naturalization",
+        "Decisions and Verdicts",
+        "Politics and Government"
+      ],
+      "org_facet": ["Islamic State in Iraq and Syria (ISIS)"],
+      "per_facet": [
+        "Begum, Shamima",
+        "Javid, Sajid (1969- )",
+        "Sultana, Kadiza",
+        "Abase, Amira"
+      ],
+      "geo_facet": ["Syria", "London (England)"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2022/11/27/world/00uk-begum01/00uk-begum01-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1365,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Shamima Begum left Britain when she was 15. Her lawyers said that she was smuggled into Syria for sexual exploitation.",
+          "copyright": "Pool photo"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2022/11/27/world/00uk-begum01/00uk-begum01-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Shamima Begum left Britain when she was 15. Her lawyers said that she was smuggled into Syria for sexual exploitation.",
+          "copyright": "Pool photo"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2022/11/27/world/00uk-begum01/00uk-begum01-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Shamima Begum left Britain when she was 15. Her lawyers said that she was smuggled into Syria for sexual exploitation.",
+          "copyright": "Pool photo"
+        }
+      ],
+      "short_url": "https://nyti.ms/3XS9Y7u"
+    },
+    {
+      "section": "movies",
+      "subsection": "",
+      "title": "Movie Honors the African Soldiers France Tried to Forget",
+      "abstract": "The success of “Tirailleurs,” set in the mire and mayhem of World War I, has helped resurface the often neglected story of colonial soldiers forced to take up somebody else’s fight.",
+      "url": "https://www.nytimes.com/2023/02/22/movies/tirailleurs-african-troops-france-world-war-i.html",
+      "uri": "nyt://article/7ab792fe-cd05-513f-a86c-9f1d2945cc51",
+      "byline": "By Roger Cohen",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T12:49:41-05:00",
+      "created_date": "2023-02-22T10:42:46-05:00",
+      "published_date": "2023-02-22T10:42:46-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Movies",
+        "World War I (1914-18)",
+        "World War II (1939-45)",
+        "Black People",
+        "Discrimination",
+        "Defense and Military Forces",
+        "Actors and Actresses",
+        "Tirailleurs (Movie)"
+      ],
+      "org_facet": [],
+      "per_facet": ["Vadepied, Mathieu", "Sy, Omar"],
+      "geo_facet": ["France", "Senegal", "Africa"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22FRENCH-SOLDIERS-01-wvmg/22FRENCE-SOLDIERS-01-wvmg-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1365,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Omar Sy, top, and Alassane Diong in “Tirailleurs.” (The movie is called “Father and Soldier” in the United States.)",
+          "copyright": "Marie-Clémence David/Gaumont"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22FRENCH-SOLDIERS-01-wvmg/22FRENCE-SOLDIERS-01-wvmg-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Omar Sy, top, and Alassane Diong in “Tirailleurs.” (The movie is called “Father and Soldier” in the United States.)",
+          "copyright": "Marie-Clémence David/Gaumont"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22FRENCH-SOLDIERS-01-wvmg/22FRENCH-SOLDIERS-01-wvmg-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Omar Sy, top, and Alassane Diong in “Tirailleurs.” (The movie is called “Father and Soldier” in the United States.)",
+          "copyright": "Marie-Clémence David/Gaumont"
+        }
+      ],
+      "short_url": "https://nyti.ms/3m0dTlC"
+    },
+    {
+      "section": "world",
+      "subsection": "europe",
+      "title": "In Northern Ukraine, a Different Sort of War Game",
+      "abstract": "Russian forces are shelling border areas there to tie up thousands of Ukrainian troops that might otherwise defend against attacks farther south.",
+      "url": "https://www.nytimes.com/2023/02/21/world/europe/ukraine-russia-shelling-kharkiv.html",
+      "uri": "nyt://article/0495f8e5-2b33-5331-aa3d-0394d7778350",
+      "byline": "By Andrew E. Kramer and Maria Varenikova",
+      "item_type": "Article",
+      "updated_date": "2023-02-21T23:20:11-05:00",
+      "created_date": "2023-02-21T05:00:37-05:00",
+      "published_date": "2023-02-21T05:00:37-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": ["Russian Invasion of Ukraine (2022)"],
+      "org_facet": ["North Atlantic Treaty Organization"],
+      "per_facet": [],
+      "geo_facet": [
+        "Belgorod (Russia)",
+        "Kharkiv (Ukraine)",
+        "Ukraine",
+        "Zaporizhzhia (Ukraine)",
+        "Donbas (Ukraine)"
+      ],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/20/multimedia/20ukraine-slavhorod-01-fzlj/20ukraine-slavhorod-01-fzlj-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1463,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Ukrainian soldiers at a position near the border with Russia this month. Ukrainian officials say Russia is tying down their troops in the region to keep them from battlefields farther south.",
+          "copyright": "Emile Ducke for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/20/multimedia/20ukraine-slavhorod-01-fzlj/20ukraine-slavhorod-01-fzlj-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Ukrainian soldiers at a position near the border with Russia this month. Ukrainian officials say Russia is tying down their troops in the region to keep them from battlefields farther south.",
+          "copyright": "Emile Ducke for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/20/multimedia/20ukraine-slavhorod-01-fzlj/20ukraine-slavhorod-01-fzlj-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Ukrainian soldiers at a position near the border with Russia this month. Ukrainian officials say Russia is tying down their troops in the region to keep them from battlefields farther south.",
+          "copyright": "Emile Ducke for The New York Times"
+        }
+      ],
+      "short_url": "https://nyti.ms/41bEMD0"
+    },
+    {
+      "section": "world",
+      "subsection": "middleeast",
+      "title": "‘Equality of Injustice for All’: Saudi Arabia Expands Crackdown on Dissent",
+      "abstract": "The kingdom’s courts are meting out harsher punishments than ever to citizens who criticize the government, with prosecutions built on Twitter posts ending in prison sentences of 15 to 45 years.",
+      "url": "https://www.nytimes.com/2023/02/21/world/middleeast/saudi-arabia-dissent-crackdown.html",
+      "uri": "nyt://article/cb4c66ac-6291-5329-abd3-e824b54bc768",
+      "byline": "By Vivian Nereim",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T08:29:46-05:00",
+      "created_date": "2023-02-21T05:00:33-05:00",
+      "published_date": "2023-02-21T05:00:33-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Politics and Government",
+        "Courts and the Judiciary",
+        "Political Prisoners",
+        "Freedom of Speech and Expression",
+        "Human Rights and Human Rights Violations",
+        "Censorship",
+        "Social Media"
+      ],
+      "org_facet": ["Twitter"],
+      "per_facet": ["Mohammed bin Salman (1985- )"],
+      "geo_facet": ["Saudi Arabia"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/19/multimedia/19saudi-dissent-1-vkhb/19saudi-dissent-1-vkhb-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1366,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Ibrahim Almadi’s father, Saad, was jailed for 19 years.",
+          "copyright": "Jason Andrew for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/19/multimedia/19saudi-dissent-1-vkhb/19saudi-dissent-1-vkhb-threeByTwoSmallAt2X-v2.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Ibrahim Almadi’s father, Saad, was jailed for 19 years.",
+          "copyright": "Jason Andrew for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/19/multimedia/19saudi-dissent-1-vkhb/19saudi-dissent-1-vkhb-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Ibrahim Almadi’s father, Saad, was jailed for 19 years.",
+          "copyright": "Jason Andrew for The New York Times"
+        }
+      ],
+      "short_url": "https://nyti.ms/3KxcxJ0"
+    },
+    {
+      "section": "world",
+      "subsection": "asia",
+      "title": "Victim or Criminal? A U.S. Navy Officer’s Imprisonment in Japan.",
+      "abstract": "Lt. Ridge Alkonis was sentenced to three years after causing a deadly traffic accident in 2021. The case has irritated U.S. relations with a crucial military ally.",
+      "url": "https://www.nytimes.com/2023/02/21/world/asia/ridge-alkonis-navy-japan-crash.html",
+      "uri": "nyt://article/d8383e55-88f1-52b6-adf4-348f4ce8360f",
+      "byline": "By Mike Ives and Hisako Ueno",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T09:19:57-05:00",
+      "created_date": "2023-02-21T04:14:11-05:00",
+      "published_date": "2023-02-21T04:14:11-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Traffic Accidents and Safety",
+        "Deaths (Fatalities)",
+        "United States Defense and Military Forces",
+        "Status of Forces Agreements"
+      ],
+      "org_facet": ["United States Navy"],
+      "per_facet": ["Alkonis, Ridge"],
+      "geo_facet": ["Japan"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/17/multimedia/00xp-japan-crash-01-fwlv/00xp-japan-crash-01-fwlv-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1365,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Lt. Ridge Alkonis, left, in an undated photo. A Japanese court found he had been negligent by falling into a “state of drowsiness” before a fatal traffic accident.",
+          "copyright": "The Alkonis family"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/17/multimedia/00xp-japan-crash-01-fwlv/00xp-japan-crash-01-fwlv-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Lt. Ridge Alkonis, left, in an undated photo. A Japanese court found he had been negligent by falling into a “state of drowsiness” before a fatal traffic accident.",
+          "copyright": "The Alkonis family"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/17/multimedia/00xp-japan-crash-01-fwlv/00xp-japan-crash-01-fwlv-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Lt. Ridge Alkonis, left, in an undated photo. A Japanese court found he had been negligent by falling into a “state of drowsiness” before a fatal traffic accident.",
+          "copyright": "The Alkonis family"
+        }
+      ],
+      "short_url": "https://nyti.ms/3IGNTo6"
+    },
+    {
+      "section": "world",
+      "subsection": "middleeast",
+      "title": "Remembering the Lives Saved Drives Rescuers in Turkey to Push On",
+      "abstract": "In the third week of a grueling effort, emergency workers battle exhaustion as the hope of finding more earthquake survivors dwindles. A powerful new quake has complicated their task.",
+      "url": "https://www.nytimes.com/2023/02/21/world/middleeast/turkey-syria-earthquake-rescues.html",
+      "uri": "nyt://article/e8ad86c8-96f7-5918-b2c7-5b503d23e662",
+      "byline": "By Raja Abdulrahim",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T08:53:22-05:00",
+      "created_date": "2023-02-21T08:39:08-05:00",
+      "published_date": "2023-02-21T08:39:08-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Turkey Earthquake (Feb 6, 2023)",
+        "Rescues",
+        "Volunteers and Community Service",
+        "Deaths (Fatalities)"
+      ],
+      "org_facet": [],
+      "per_facet": [],
+      "geo_facet": ["Antakya (Turkey)", "Syria", "Turkey"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/world/21Quake-Rescuers/21Quake-Rescuers-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1536,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Soldiers, volunteers and rescue workers at the scene of a collapsed building in Antakya, Turkey, on Monday.",
+          "copyright": "Emin Ozmen for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/world/21Quake-Rescuers/21Quake-Rescuers-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Soldiers, volunteers and rescue workers at the scene of a collapsed building in Antakya, Turkey, on Monday.",
+          "copyright": "Emin Ozmen for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/world/21Quake-Rescuers/21Quake-Rescuers-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Soldiers, volunteers and rescue workers at the scene of a collapsed building in Antakya, Turkey, on Monday.",
+          "copyright": "Emin Ozmen for The New York Times"
+        }
+      ],
+      "short_url": "https://nyti.ms/3IkmrLA"
+    },
+    {
+      "section": "world",
+      "subsection": "americas",
+      "title": "Israel Unlikely to Extradite Mexican Ex-Lawman Wanted in Mass Abduction, Officials Say",
+      "abstract": "The Mexican authorities say Tomás Zerón tortured witnesses and tampered with evidence in a crucial investigation into the 2014 disappearance of 43 students.",
+      "url": "https://www.nytimes.com/2023/02/21/world/americas/israel-mexico-extradition-tomas-zeron.html",
+      "uri": "nyt://article/bdb5daeb-cf13-5b7b-a1aa-c51c16fc9233",
+      "byline": "By Ronen Bergman and Natalie Kitroeff",
+      "item_type": "Article",
+      "updated_date": "2023-02-21T23:22:49-05:00",
+      "created_date": "2023-02-21T14:12:09-05:00",
+      "published_date": "2023-02-21T14:12:09-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": ["Extradition"],
+      "org_facet": [],
+      "per_facet": ["Lopez Obrador, Andres Manuel", "Zeron de Lucio, Tomas"],
+      "geo_facet": ["Israel", "Tel Aviv (Israel)", "Mexico"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/20/multimedia/20mexico-extradition-gpmc/20mexico-extradition-gpmc-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1367,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Tomás Zerón, then the director of Mexico’s Criminal Investigation Agency, in 2015.",
+          "copyright": "Yuri Cortez/Agence France-Presse — Getty Images"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/20/multimedia/20mexico-extradition-gpmc/20mexico-extradition-gpmc-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Tomás Zerón, then the director of Mexico’s Criminal Investigation Agency, in 2015.",
+          "copyright": "Yuri Cortez/Agence France-Presse — Getty Images"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/20/multimedia/20mexico-extradition-gpmc/20mexico-extradition-gpmc-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Tomás Zerón, then the director of Mexico’s Criminal Investigation Agency, in 2015.",
+          "copyright": "Yuri Cortez/Agence France-Presse — Getty Images"
+        }
+      ],
+      "short_url": "https://nyti.ms/3ZaujGh"
+    },
+    {
+      "section": "world",
+      "subsection": "asia",
+      "title": "Are North Korea’s Nuclear Weapons Tests as Safe as the Country Claims?",
+      "abstract": "The country has conducted six underground nuclear tests, and a seventh may be on the way. Rights groups fear their environmental and health consequences.",
+      "url": "https://www.nytimes.com/2023/02/21/world/asia/north-korea-nuclear-weapons-tests.html",
+      "uri": "nyt://article/2dfe92b5-8199-5670-a8e7-220f834efef3",
+      "byline": "By Choe Sang-Hun",
+      "item_type": "Article",
+      "updated_date": "2023-02-21T23:22:59-05:00",
+      "created_date": "2023-02-21T03:44:13-05:00",
+      "published_date": "2023-02-21T03:44:13-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Nuclear Tests",
+        "Nuclear Weapons",
+        "International Relations",
+        "Radiation",
+        "Defectors (Political)",
+        "Defense and Military Forces"
+      ],
+      "org_facet": ["Transitional Justice Working Group"],
+      "per_facet": ["Kim Jong-un", "Kim Yo-jong"],
+      "geo_facet": ["North Korea", "South Korea", "China", "Japan"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21nkorea-fwmj/21nkorea-fwmj-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1366,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "A satellite image of the Punggye-ri nuclear test site in Kilju, a county in North Korea, in March 2022.",
+          "copyright": "Maxar Technologies, via Reuters"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21nkorea-fwmj/21nkorea-fwmj-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "A satellite image of the Punggye-ri nuclear test site in Kilju, a county in North Korea, in March 2022.",
+          "copyright": "Maxar Technologies, via Reuters"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21nkorea-fwmj/21nkorea-fwmj-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "A satellite image of the Punggye-ri nuclear test site in Kilju, a county in North Korea, in March 2022.",
+          "copyright": "Maxar Technologies, via Reuters"
+        }
+      ],
+      "short_url": "https://nyti.ms/3lUbqJv"
+    },
+    {
+      "section": "nyregion",
+      "subsection": "",
+      "title": "Mexico’s Ex-Top Security Official Is Convicted of Cartel Bribery",
+      "abstract": "A Brooklyn jury found Genaro García Luna guilty of taking millions of dollars from the Sinaloa drug cartel when he was in charge of Mexico’s bloody war on organized crime.",
+      "url": "https://www.nytimes.com/2023/02/21/nyregion/genaro-garcia-luna-guilty.html",
+      "uri": "nyt://article/f3e65f56-6fd9-5f6d-a169-f9e3f4d579b4",
+      "byline": "By Alan Feuer and Nate Schweber",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T12:17:43-05:00",
+      "created_date": "2023-02-21T15:06:07-05:00",
+      "published_date": "2023-02-21T15:06:07-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Decisions and Verdicts",
+        "Drug Abuse and Traffic",
+        "Bribery and Kickbacks",
+        "Drug Cartels",
+        "Corruption (Institutional)"
+      ],
+      "org_facet": ["Sinaloa Cartel"],
+      "per_facet": [
+        "Barragan, Villarreal",
+        "Garcia Luna, Genaro",
+        "Zambada Garcia, Ismael",
+        "Zambada Garcia, Jesus"
+      ],
+      "geo_facet": ["Mexico"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/17/multimedia/hfo00mexico-corruption-trial-convict-qfkp/hfo00mexico-corruption-trial-convict-qfkp-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1526,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Genaro García Luna in 2004, when he headed Mexico’s version of the F.B.I.",
+          "copyright": "Jorge Nunez/European Pressphoto Agency"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/17/multimedia/hfo00mexico-corruption-trial-convict-qfkp/hfo00mexico-corruption-trial-convict-qfkp-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Genaro García Luna in 2004, when he headed Mexico’s version of the F.B.I.",
+          "copyright": "Jorge Nunez/European Pressphoto Agency"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/17/multimedia/hfo00mexico-corruption-trial-convict-qfkp/hfo00mexico-corruption-trial-convict-qfkp-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Genaro García Luna in 2004, when he headed Mexico’s version of the F.B.I.",
+          "copyright": "Jorge Nunez/European Pressphoto Agency"
+        }
+      ],
+      "short_url": "https://nyti.ms/3EuRN0K"
+    },
+    {
+      "section": "world",
+      "subsection": "africa",
+      "title": "Nigerian Election 2023: What to Know, What Polling Shows",
+      "abstract": "The presidential election this week in Africa’s most populous country is completely unpredictable. An unexpected third candidate with a huge youth following may upend decades of traditional politics.",
+      "url": "https://www.nytimes.com/article/nigeria-election.html",
+      "uri": "nyt://article/07ee4ef2-fb53-5c35-a1b5-9b3942937aef",
+      "byline": "By Ruth Maclean",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T08:27:59-05:00",
+      "created_date": "2023-02-14T09:04:34-05:00",
+      "published_date": "2023-02-14T09:04:34-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Elections",
+        "Politics and Government",
+        "Economic Conditions and Trends",
+        "Muslims and Islam"
+      ],
+      "org_facet": [],
+      "per_facet": [
+        "Buhari, Muhammadu",
+        "Abubakar, Atiku",
+        "Obi, Peter (1961- )",
+        "Tinubu, Bola Ahmed",
+        "Kwankwaso, Rabiu"
+      ],
+      "geo_facet": ["Nigeria"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/12/multimedia/00nigeria-promo-vthm/00nigeria-promo-vthm-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1352,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Candidates in the race to become Nigeria’s next president, from left: Bola Ahmed Tinubu, Atiku Abubakar, Peter Obi, Rabiu Kwankwaso.",
+          "copyright": "AFP; AFP; AFP; AP"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/12/multimedia/00nigeria-promo-vthm/00nigeria-promo-vthm-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Candidates in the race to become Nigeria’s next president, from left: Bola Ahmed Tinubu, Atiku Abubakar, Peter Obi, Rabiu Kwankwaso.",
+          "copyright": "AFP; AFP; AFP; AP"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/12/multimedia/00nigeria-promo-vthm/00nigeria-promo-vthm-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Candidates in the race to become Nigeria’s next president, from left: Bola Ahmed Tinubu, Atiku Abubakar, Peter Obi, Rabiu Kwankwaso.",
+          "copyright": "AFP; AFP; AFP; AP"
+        }
+      ],
+      "short_url": "https://nyti.ms/3lBX7ZX"
+    },
+    {
+      "section": "world",
+      "subsection": "americas",
+      "title": "Counting votes and cutting violence",
+      "abstract": "A new study found that the type of party that won election in Brazil seemed to have a correlation with violence immediately after the vote.",
+      "url": "https://www.nytimes.com/2023/02/22/world/americas/counting-votes-and-cutting-violence.html",
+      "uri": "nyt://article/3d84abdf-1f89-5a39-bf8a-b3aa14990de1",
+      "byline": "By Amanda Taub",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T13:09:53-05:00",
+      "created_date": "2023-02-22T12:52:14-05:00",
+      "published_date": "2023-02-22T12:52:14-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Voter Fraud (Election Fraud)",
+        "Elections",
+        "Politics and Government"
+      ],
+      "org_facet": ["Workers' Party (Brazil)"],
+      "per_facet": [],
+      "geo_facet": ["Brazil"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/InterpreterNL-Brazil-kzvl/InterpreterNL-Brazil-kzvl-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1366,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Shattered glass at Brazil’s Supreme Court after supporters of former President Jair Bolsonaro rioted in Brasília in January.",
+          "copyright": "Victor Moriyama for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/InterpreterNL-Brazil-kzvl/InterpreterNL-Brazil-kzvl-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Shattered glass at Brazil’s Supreme Court after supporters of former President Jair Bolsonaro rioted in Brasília in January.",
+          "copyright": "Victor Moriyama for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/InterpreterNL-Brazil-kzvl/InterpreterNL-Brazil-kzvl-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Shattered glass at Brazil’s Supreme Court after supporters of former President Jair Bolsonaro rioted in Brasília in January.",
+          "copyright": "Victor Moriyama for The New York Times"
+        }
+      ],
+      "short_url": "https://nyti.ms/3Kro9xr"
+    },
+    {
+      "section": "world",
+      "subsection": "europe",
+      "title": "Ukraine prepares itself for the possibility of Russian aggression via Moldova and Belarus.",
+      "abstract": "Military analysts doubt Russia’s ability to sustain a new front, but Ukrainian and Western officials have warned that Moscow could try to divert Ukrainian resources.",
+      "url": "https://www.nytimes.com/2023/02/22/world/europe/russia-moldova-ukraine.html",
+      "uri": "nyt://article/3dbdb872-ac2f-57cc-ab02-c9c4ca541a07",
+      "byline": "By Marc Santora",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T14:05:43-05:00",
+      "created_date": "2023-02-22T12:50:45-05:00",
+      "published_date": "2023-02-22T12:50:45-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": ["Russian Invasion of Ukraine (2022)"],
+      "org_facet": [],
+      "per_facet": [],
+      "geo_facet": ["Ukraine", "Belarus", "Moldova", "Russia"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22ukraine-blog-high-alert-topart-tbpw/22ukraine-blog-high-alert-topart-tbpw-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1366,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Ukrainian soldiers looked out from trenches in northern Ukraine, only a few miles away from the Belarusian border, last month.",
+          "copyright": "Lynsey Addario for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22ukraine-blog-high-alert-topart-tbpw/22ukraine-blog-high-alert-topart-tbpw-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Ukrainian soldiers looked out from trenches in northern Ukraine, only a few miles away from the Belarusian border, last month.",
+          "copyright": "Lynsey Addario for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22ukraine-blog-high-alert-topart-tbpw/22ukraine-blog-high-alert-topart-tbpw-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Ukrainian soldiers looked out from trenches in northern Ukraine, only a few miles away from the Belarusian border, last month.",
+          "copyright": "Lynsey Addario for The New York Times"
+        }
+      ],
+      "short_url": "https://nyti.ms/3Eqvbi7"
+    },
+    {
+      "section": "travel",
+      "subsection": "",
+      "title": "Joshua Bell’s London",
+      "abstract": "The celebrated violinist recommends five spots in Britain’s capital, a city he’s visited some 70 times since the 1980s.",
+      "url": "https://www.nytimes.com/2023/02/22/travel/london-joshua-bell-recommendations.html",
+      "uri": "nyt://article/65888fba-e7cc-5f8c-9269-265a67eb80df",
+      "byline": "By Danielle Pergament and Mary Turner",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T13:43:57-05:00",
+      "created_date": "2023-02-22T05:00:47-05:00",
+      "published_date": "2023-02-22T05:00:47-05:00",
+      "material_type_facet": "",
+      "kicker": "5 Favorite Places",
+      "des_facet": [
+        "Classical Music",
+        "Food",
+        "Travel and Vacations",
+        "Proms",
+        "Violins and Violas"
+      ],
+      "org_facet": ["Wigmore Hall (London, England, Music Venue)"],
+      "per_facet": [],
+      "geo_facet": ["London (England)"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/03/multimedia/travel-london-joshua-bell-02/travel-london-joshua-bell-02-vkqp-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1363,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Dusk falls over London’s Royal Albert Hall, where Joshua Bell has performed at the famous Proms concerts. ",
+          "copyright": ""
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/03/multimedia/travel-london-joshua-bell-02/travel-london-joshua-bell-02-vkqp-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Dusk falls over London’s Royal Albert Hall, where Joshua Bell has performed at the famous Proms concerts. ",
+          "copyright": ""
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/03/multimedia/travel-london-joshua-bell-02/travel-london-joshua-bell-02-vkqp-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Dusk falls over London’s Royal Albert Hall, where Joshua Bell has performed at the famous Proms concerts. ",
+          "copyright": ""
+        }
+      ],
+      "short_url": "https://nyti.ms/3In35Wf"
+    },
+    {
+      "section": "us",
+      "subsection": "politics",
+      "title": "China’s Economic Support for Russia Could Elicit More Sanctions",
+      "abstract": "U.S. officials pledged to crack down on shipments to Russia that can be used for both civilian and military purposes, but that has proved hard to police.",
+      "url": "https://www.nytimes.com/2023/02/22/us/politics/china-russia-sanctions.html",
+      "uri": "nyt://article/84a19631-017e-5f23-b6d6-a679efd99c86",
+      "byline": "By Ana Swanson",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T11:22:18-05:00",
+      "created_date": "2023-02-22T05:00:45-05:00",
+      "published_date": "2023-02-22T05:00:45-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "United States International Relations",
+        "International Relations",
+        "Russian Invasion of Ukraine (2022)",
+        "Defense and Military Forces",
+        "United States Politics and Government",
+        "Embargoes and Sanctions",
+        "International Trade and World Market",
+        "Computer Chips"
+      ],
+      "org_facet": ["State Department", "Treasury Department"],
+      "per_facet": [
+        "Adeyemo, Adewale",
+        "Biden, Joseph R Jr",
+        "Blinken, Antony J"
+      ],
+      "geo_facet": ["China", "Russia", "Ukraine"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22dc-us-china-01-kplq/22dc-us-china-01-kplq-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1365,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "President Biden with Ukraine’s president, Volodymyr Zelensky, in Kyiv. Mr. Biden said the United States and its partners would announce new measures targeting sanctions evasion this week.",
+          "copyright": "Daniel Berehulak/The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22dc-us-china-01-kplq/22dc-us-china-01-kplq-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "President Biden with Ukraine’s president, Volodymyr Zelensky, in Kyiv. Mr. Biden said the United States and its partners would announce new measures targeting sanctions evasion this week.",
+          "copyright": "Daniel Berehulak/The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22dc-us-china-01-kplq/22dc-us-china-01-kplq-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "President Biden with Ukraine’s president, Volodymyr Zelensky, in Kyiv. Mr. Biden said the United States and its partners would announce new measures targeting sanctions evasion this week.",
+          "copyright": "Daniel Berehulak/The New York Times"
+        }
+      ],
+      "short_url": "https://nyti.ms/3IkuFmN"
+    },
+    {
+      "section": "technology",
+      "subsection": "",
+      "title": "Inside Taiwanese Chip Giant, a U.S. Expansion Stokes Tensions",
+      "abstract": "Employee doubts are rising about Taiwan Semiconductor Manufacturing Company’s $40 billion investment in an Arizona factory.",
+      "url": "https://www.nytimes.com/2023/02/22/technology/tsmc-arizona-factory-tensions.html",
+      "uri": "nyt://article/b5f0fcfb-eeaa-5761-9f09-3c563ef395a7",
+      "byline": "By John Liu and Paul Mozur",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T09:19:32-05:00",
+      "created_date": "2023-02-22T05:00:31-05:00",
+      "published_date": "2023-02-22T05:00:31-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Factories and Manufacturing",
+        "Computer Chips",
+        "International Relations",
+        "Labor and Jobs",
+        "Workplace Environment",
+        "United States International Relations",
+        "Engineering and Engineers"
+      ],
+      "org_facet": [
+        "Taiwan Semiconductor Manufacturing Company Ltd",
+        "WaferTech"
+      ],
+      "per_facet": [],
+      "geo_facet": [
+        "Arizona",
+        "China",
+        "Phoenix (Ariz)",
+        "Taiwan",
+        "United States"
+      ],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22tsmc-01-wgpz/22tsmc-01-wgpz-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1365,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Taiwan Semiconductor Manufacturing Company is upgrading and expanding a factory it is building in Phoenix, a vital project for U.S. tech strategy.",
+          "copyright": "Adriana Zehbrauskas for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22tsmc-01-wgpz/22tsmc-01-wgpz-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Taiwan Semiconductor Manufacturing Company is upgrading and expanding a factory it is building in Phoenix, a vital project for U.S. tech strategy.",
+          "copyright": "Adriana Zehbrauskas for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22tsmc-01-wgpz/22tsmc-01-wgpz-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Taiwan Semiconductor Manufacturing Company is upgrading and expanding a factory it is building in Phoenix, a vital project for U.S. tech strategy.",
+          "copyright": "Adriana Zehbrauskas for The New York Times"
+        }
+      ],
+      "short_url": "https://nyti.ms/3m0lKzm"
+    },
+    {
+      "section": "world",
+      "subsection": "europe",
+      "title": "Biden’s Meeting With Eastern European Leaders Will Cap His Trip",
+      "abstract": "The nine countries along NATO’s eastern flank are the likeliest targets of another Russian invasion.",
+      "url": "https://www.nytimes.com/2023/02/22/world/europe/biden-nato-ukraine-poland.html",
+      "uri": "nyt://article/b04c132c-8ba6-5272-a287-d437adeb7489",
+      "byline": "By Michael D. Shear",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T02:58:24-05:00",
+      "created_date": "2023-02-22T02:11:49-05:00",
+      "published_date": "2023-02-22T02:11:49-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "United States International Relations",
+        "Russian Invasion of Ukraine (2022)",
+        "Defense and Military Forces"
+      ],
+      "org_facet": ["North Atlantic Treaty Organization"],
+      "per_facet": ["Biden, Joseph R Jr"],
+      "geo_facet": [
+        "Poland",
+        "Bulgaria",
+        "Czech Republic",
+        "Estonia",
+        "Hungary",
+        "Latvia",
+        "Lithuania",
+        "Romania",
+        "Slovakia"
+      ],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22ukraine-blog-biden-B9-01-ztcb/22ukraine-blog-biden-B9-01-ztcb-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1365,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "President Biden during a bilateral meeting on Tuesday, with President Andrzej Duda of Poland, at the Presidential Palace in Warsaw, Poland, on Tuesday.",
+          "copyright": "Doug Mills/The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22ukraine-blog-biden-B9-01-ztcb/22ukraine-blog-biden-B9-01-ztcb-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "President Biden during a bilateral meeting on Tuesday, with President Andrzej Duda of Poland, at the Presidential Palace in Warsaw, Poland, on Tuesday.",
+          "copyright": "Doug Mills/The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22ukraine-blog-biden-B9-01-ztcb/22ukraine-blog-biden-B9-01-ztcb-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "President Biden during a bilateral meeting on Tuesday, with President Andrzej Duda of Poland, at the Presidential Palace in Warsaw, Poland, on Tuesday.",
+          "copyright": "Doug Mills/The New York Times"
+        }
+      ],
+      "short_url": "https://nyti.ms/3kgZFw0"
+    },
+    {
+      "section": "briefing",
+      "subsection": "",
+      "title": "Your Wednesday Briefing",
+      "abstract": "Addresses by President Biden and Vladimir Putin.",
+      "url": "https://www.nytimes.com/2023/02/22/briefing/biden-putin-turkey-poland.html",
+      "uri": "nyt://article/947e06f3-085d-5bcb-a822-fe6e51eba47b",
+      "byline": "By Natasha Frost",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T09:22:49-05:00",
+      "created_date": "2023-02-22T00:21:05-05:00",
+      "published_date": "2023-02-22T00:21:05-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [],
+      "org_facet": [],
+      "per_facet": [],
+      "geo_facet": [],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22ambriefing-europe-nl-promo-feb/22themorning-biden-glfm-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 2048,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "U.S. President Joe Biden in Warsaw, Poland on Tuesday.",
+          "copyright": "Doug Mills/The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22ambriefing-europe-nl-promo-feb/22themorning-biden-glfm-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "U.S. President Joe Biden in Warsaw, Poland on Tuesday.",
+          "copyright": "Doug Mills/The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/22ambriefing-europe-nl-promo-feb/22themorning-biden-glfm-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "U.S. President Joe Biden in Warsaw, Poland on Tuesday.",
+          "copyright": "Doug Mills/The New York Times"
+        }
+      ],
+      "short_url": "https://nyti.ms/3ExsV8H"
+    },
+    {
+      "section": "climate",
+      "subsection": "",
+      "title": "How Widespread Are These Toxic Chemicals? They’re Everywhere.",
+      "abstract": "Researchers created a map showing where PFAS compounds, linked to cancer in humans, have been detected in wildlife. It spans the globe.",
+      "url": "https://www.nytimes.com/2023/02/22/climate/pfas-forever-chemicals-wildlife-animals.html",
+      "uri": "nyt://article/5239b3cb-0071-5220-91f1-a6286228c085",
+      "byline": "By Catrin Einhorn",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T13:01:07-05:00",
+      "created_date": "2023-02-22T00:01:07-05:00",
+      "published_date": "2023-02-22T00:01:07-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "PFAS (Per- and Polyfluoroalkyl Substances)",
+        "Animals",
+        "Research",
+        "Biodiversity",
+        "Hazardous and Toxic Substances",
+        "Endangered and Extinct Species"
+      ],
+      "org_facet": ["Environmental Working Group"],
+      "per_facet": [],
+      "geo_facet": [],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/science/22cli-foreverchemicals/22cli-foreverchemicals-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1365,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "A warning to hunters in Oscoda, Mich.",
+          "copyright": "Drew YoungeDyke/National Wildlife Federation, via Associated Press"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/science/22cli-foreverchemicals/22cli-foreverchemicals-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "A warning to hunters in Oscoda, Mich.",
+          "copyright": "Drew YoungeDyke/National Wildlife Federation, via Associated Press"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/science/22cli-foreverchemicals/22cli-foreverchemicals-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "A warning to hunters in Oscoda, Mich.",
+          "copyright": "Drew YoungeDyke/National Wildlife Federation, via Associated Press"
+        }
+      ],
+      "short_url": "https://nyti.ms/3EwnXJw"
+    },
+    {
+      "section": "world",
+      "subsection": "europe",
+      "title": "Biden Accuses Putin of Atrocities and Urges World to Rebuke Him",
+      "abstract": "In sharply opposed speeches, President Biden said Vladimir V. Putin bore sole responsibility for the war, while Mr. Putin said Russia had invaded in self-defense. But they agreed the war would not end soon.",
+      "url": "https://www.nytimes.com/2023/02/21/world/europe/biden-putin-russia-ukraine.html",
+      "uri": "nyt://article/33c89d01-4c07-5d7c-b6f5-13038e8e1866",
+      "byline": "By David E. Sanger, Michael D. Shear and Anton Troianovski",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T08:00:51-05:00",
+      "created_date": "2023-02-21T19:18:40-05:00",
+      "published_date": "2023-02-21T19:18:40-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Russian Invasion of Ukraine (2022)",
+        "United States International Relations",
+        "Speeches and Statements",
+        "War Crimes, Genocide and Crimes Against Humanity",
+        "Nuclear Weapons",
+        "Defense and Military Forces",
+        "Strategic Arms Reduction Treaty"
+      ],
+      "org_facet": [],
+      "per_facet": ["Biden, Joseph R Jr", "Putin, Vladimir V"],
+      "geo_facet": ["Russia", "Ukraine"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21-ukraine-LEDEALL-qvbg/21-ukraine-LEDEALL-qvbg-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1365,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "President Biden speaking at the Royal Castle Gardens in Warsaw on Tuesday.",
+          "copyright": "Doug Mills/The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21-ukraine-LEDEALL-qvbg/21-ukraine-LEDEALL-qvbg-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "President Biden speaking at the Royal Castle Gardens in Warsaw on Tuesday.",
+          "copyright": "Doug Mills/The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21-ukraine-LEDEALL-qvbg/21-ukraine-LEDEALL-qvbg-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "President Biden speaking at the Royal Castle Gardens in Warsaw on Tuesday.",
+          "copyright": "Doug Mills/The New York Times"
+        }
+      ],
+      "short_url": "https://nyti.ms/3SsG1Kb"
+    },
+    {
+      "section": "world",
+      "subsection": "europe",
+      "title": "In Kyiv, Italy’s prime minister condemns Russia and pledges further support to Ukraine.",
+      "abstract": "The prime minister, Giorgia Meloni, reiterated her backing amid dissension within her coalition government on the issue.",
+      "url": "https://www.nytimes.com/2023/02/21/world/europe/giorgia-meloni-ukraine-kyiv-russia.html",
+      "uri": "nyt://article/fc4a44f4-2a43-58d4-917c-60eddea4525a",
+      "byline": "By Elisabetta Povoledo",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T01:10:21-05:00",
+      "created_date": "2023-02-21T17:57:23-05:00",
+      "published_date": "2023-02-21T17:57:23-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": ["Russian Invasion of Ukraine (2022)"],
+      "org_facet": [],
+      "per_facet": [
+        "Berlusconi, Silvio",
+        "Meloni, Giorgia (1977- )",
+        "Putin, Vladimir V",
+        "Zelensky, Volodymyr",
+        "Salvini, Matteo"
+      ],
+      "geo_facet": [
+        "Italy",
+        "Kyiv (Ukraine)",
+        "Ukraine",
+        "Russia",
+        "Irpin (Ukraine)"
+      ],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21ukraine-blog-meloni-kyiv02-qvwf/21ukraine-blog-meloni-kyiv02-qvwf-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1399,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Prime Minister Giorgia Meloni of Italy at a joint news briefing with President Volodymyr Zelensky of Ukraine on Tuesday in Kyiv.",
+          "copyright": "Gleb Garanich/Reuters"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21ukraine-blog-meloni-kyiv02-qvwf/21ukraine-blog-meloni-kyiv02-qvwf-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Prime Minister Giorgia Meloni of Italy at a joint news briefing with President Volodymyr Zelensky of Ukraine on Tuesday in Kyiv.",
+          "copyright": "Gleb Garanich/Reuters"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21ukraine-blog-meloni-kyiv02-qvwf/21ukraine-blog-meloni-kyiv02-qvwf-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Prime Minister Giorgia Meloni of Italy at a joint news briefing with President Volodymyr Zelensky of Ukraine on Tuesday in Kyiv.",
+          "copyright": "Gleb Garanich/Reuters"
+        }
+      ],
+      "short_url": "https://nyti.ms/3Z8PWGU"
+    },
+    {
+      "section": "briefing",
+      "subsection": "",
+      "title": "Your Wednesday Briefing: Biden and Putin Speak on Ukraine",
+      "abstract": "Also, Saudi Arabia intensifies a crackdown and the Philippines moves closer to the U.S.",
+      "url": "https://www.nytimes.com/2023/02/21/briefing/biden-putin-speeches-ukraine.html",
+      "uri": "nyt://article/6edc655f-e083-5569-9fa8-fcdc6d691d4b",
+      "byline": "By Amelia Nierenberg",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T04:12:32-05:00",
+      "created_date": "2023-02-21T15:46:28-05:00",
+      "published_date": "2023-02-21T15:46:28-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": ["Russian Invasion of Ukraine (2022)"],
+      "org_facet": [],
+      "per_facet": [
+        "Putin, Vladimir V",
+        "Biden, Joseph R Jr",
+        "Marcos, Ferdinand Jr"
+      ],
+      "geo_facet": ["Russia", "Ukraine", "Philippines", "Saudi Arabia"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/022223ambriefing-asia-promo/22ambriefing-asia-biden1-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1639,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "President Biden delivered remarks on Tuesday at the Royal Castle in Warsaw ahead of the anniversary of Russia’s invasion of Ukraine.",
+          "copyright": "Doug Mills/The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/022223ambriefing-asia-promo/22ambriefing-asia-biden1-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "President Biden delivered remarks on Tuesday at the Royal Castle in Warsaw ahead of the anniversary of Russia’s invasion of Ukraine.",
+          "copyright": "Doug Mills/The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/22/multimedia/022223ambriefing-asia-promo/22ambriefing-asia-biden1-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "President Biden delivered remarks on Tuesday at the Royal Castle in Warsaw ahead of the anniversary of Russia’s invasion of Ukraine.",
+          "copyright": "Doug Mills/The New York Times"
+        }
+      ],
+      "short_url": "https://nyti.ms/3EpkoVu"
+    },
+    {
+      "section": "us",
+      "subsection": "politics",
+      "title": "Judge Rejects Bid by Sept. 11 Families to Seize Frozen Afghan Central Bank Funds",
+      "abstract": "A lawyer for the lead group of victim relatives who had sought $3.5 billion in frozen assets said they would appeal.",
+      "url": "https://www.nytimes.com/2023/02/21/us/politics/judge-sept-11-afghan-central-bank.html",
+      "uri": "nyt://article/1ac13025-a482-50a8-a731-90d0dcd9163f",
+      "byline": "By Charlie Savage",
+      "item_type": "Article",
+      "updated_date": "2023-02-21T23:22:16-05:00",
+      "created_date": "2023-02-21T15:39:29-05:00",
+      "published_date": "2023-02-21T15:39:29-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Terrorism",
+        "Decisions and Verdicts",
+        "September 11 (2001)",
+        "Compensation for Damages (Law)",
+        "United States Politics and Government"
+      ],
+      "org_facet": ["Taliban", "Federal Reserve Bank of New York"],
+      "per_facet": ["Daniels, George B"],
+      "geo_facet": ["Afghanistan"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21dc-afghan-vkgc/21dc-afghan-vkgc-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1365,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "The September 11 Memorial in New York City.",
+          "copyright": "Todd Heisler/The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21dc-afghan-vkgc/21dc-afghan-vkgc-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "The September 11 Memorial in New York City.",
+          "copyright": "Todd Heisler/The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21dc-afghan-vkgc/21dc-afghan-vkgc-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "The September 11 Memorial in New York City.",
+          "copyright": "Todd Heisler/The New York Times"
+        }
+      ],
+      "short_url": "https://nyti.ms/3IfV5pQ"
+    },
+    {
+      "section": "health",
+      "subsection": "",
+      "title": "Mpox Often Leads to Severe Illness, Even Death, in People With Advanced H.I.V.",
+      "abstract": "The death rate among these patients is about 15 percent, researchers reported. The virus should be added to the list of opportunistic infections seen in patients with advanced H.I.V., scientists said.",
+      "url": "https://www.nytimes.com/2023/02/21/health/mpox-hiv.html",
+      "uri": "nyt://article/4f94f9b1-4b3b-5d04-b505-cb7fb2cfd67d",
+      "byline": "By Apoorva Mandavilli",
+      "item_type": "Article",
+      "updated_date": "2023-02-21T23:29:26-05:00",
+      "created_date": "2023-02-21T14:32:07-05:00",
+      "published_date": "2023-02-21T14:32:07-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Acquired Immune Deficiency Syndrome",
+        "Monkeypox",
+        "Research",
+        "Immune System",
+        "Deaths (Fatalities)",
+        "Viruses"
+      ],
+      "org_facet": ["Lancet, The (Journal)"],
+      "per_facet": [],
+      "geo_facet": [],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21mpox-gcht/21mpox-gcht-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1364,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "A colorized transmission electron micrograph of mpox particles, in red, in an infected cell. Although the number of cases has slowed in most regions, mpox has so far affected roughly 86,000 people in 110 countries and killed 92.",
+          "copyright": "National Institute of Allergy and Infectious Diseases, via Associated Press"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21mpox-gcht/21mpox-gcht-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 399,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "A colorized transmission electron micrograph of mpox particles, in red, in an infected cell. Although the number of cases has slowed in most regions, mpox has so far affected roughly 86,000 people in 110 countries and killed 92.",
+          "copyright": "National Institute of Allergy and Infectious Diseases, via Associated Press"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21mpox-gcht/21mpox-gcht-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "A colorized transmission electron micrograph of mpox particles, in red, in an infected cell. Although the number of cases has slowed in most regions, mpox has so far affected roughly 86,000 people in 110 countries and killed 92.",
+          "copyright": "National Institute of Allergy and Infectious Diseases, via Associated Press"
+        }
+      ],
+      "short_url": "https://nyti.ms/3YSWytc"
+    },
+    {
+      "section": "world",
+      "subsection": "europe",
+      "title": "No One in Europe Is Telling Poland to ‘Shut Up’ Now",
+      "abstract": "Having been proved right about Russia, Warsaw is savoring its newfound influence in NATO and on Ukraine policy.",
+      "url": "https://www.nytimes.com/2023/02/21/world/europe/poland-russia-ukraine.html",
+      "uri": "nyt://article/34a8081c-798c-50b5-a7f4-6a4dee1ed879",
+      "byline": "By Andrew Higgins",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T10:51:45-05:00",
+      "created_date": "2023-02-21T13:24:58-05:00",
+      "published_date": "2023-02-21T13:24:58-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "International Relations",
+        "United States International Relations",
+        "Russian Invasion of Ukraine (2022)"
+      ],
+      "org_facet": ["European Union", "North Atlantic Treaty Organization"],
+      "per_facet": ["Morawiecki, Mateusz", "Biden, Joseph R Jr"],
+      "geo_facet": ["Central Europe", "Europe", "Poland", "Russia"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21ukraine-blog-poland-02-vmzt/21ukraine-blog-poland-02-vmzt-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1367,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "President Biden, who praised Poland on Tuesday as “critical” in the West’s response to Russia, at a meeting with President Andrzej Duda and Prime Minister Mateusz Morawiecki in Warsaw on Tuesday.",
+          "copyright": "Doug Mills/The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21ukraine-blog-poland-02-vmzt/21ukraine-blog-poland-02-vmzt-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "President Biden, who praised Poland on Tuesday as “critical” in the West’s response to Russia, at a meeting with President Andrzej Duda and Prime Minister Mateusz Morawiecki in Warsaw on Tuesday.",
+          "copyright": "Doug Mills/The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21ukraine-blog-poland-02-vmzt/21ukraine-blog-poland-02-vmzt-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "President Biden, who praised Poland on Tuesday as “critical” in the West’s response to Russia, at a meeting with President Andrzej Duda and Prime Minister Mateusz Morawiecki in Warsaw on Tuesday.",
+          "copyright": "Doug Mills/The New York Times"
+        }
+      ],
+      "short_url": "https://nyti.ms/3SjqCvC"
+    },
+    {
+      "section": "world",
+      "subsection": "asia",
+      "title": "China’s Courtship of European Powers Hits a Russian Wall",
+      "abstract": "Beijing, in urgent need of reviving its economy, wants to mend ties with Europe but is struggling to create distance between itself and Moscow.",
+      "url": "https://www.nytimes.com/2023/02/21/world/asia/china-europe-russia-ukraine.html",
+      "uri": "nyt://article/6a1e85b1-3c70-5771-8f35-3c0fb0ed6bb5",
+      "byline": "By David Pierson",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T08:02:44-05:00",
+      "created_date": "2023-02-21T12:26:30-05:00",
+      "published_date": "2023-02-21T12:26:30-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "International Relations",
+        "United States International Relations",
+        "Embargoes and Sanctions",
+        "Russian Invasion of Ukraine (2022)",
+        "Defense and Military Forces"
+      ],
+      "org_facet": ["European Union", "North Atlantic Treaty Organization"],
+      "per_facet": [],
+      "geo_facet": ["China", "Europe", "Russia", "Ukraine"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/china-europe-russia-kcfh/china-europe-russia-kcfh-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1366,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Wang Yi, China’s most senior diplomat, shakes hands with German Chancellor Olaf Scholz at the Munich Security Conference on Friday.",
+          "copyright": "Pool photo by Thomas Kienzle"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/china-europe-russia-kcfh/china-europe-russia-kcfh-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Wang Yi, China’s most senior diplomat, shakes hands with German Chancellor Olaf Scholz at the Munich Security Conference on Friday.",
+          "copyright": "Pool photo by Thomas Kienzle"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/china-europe-russia-kcfh/china-europe-russia-kcfh-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Wang Yi, China’s most senior diplomat, shakes hands with German Chancellor Olaf Scholz at the Munich Security Conference on Friday.",
+          "copyright": "Pool photo by Thomas Kienzle"
+        }
+      ],
+      "short_url": "https://nyti.ms/3Z5tkqK"
+    },
+    {
+      "section": "climate",
+      "subsection": "",
+      "title": "Parched California Misses a Chance to Store More Rain Underground",
+      "abstract": "Torrential rains could have helped to replenish depleted aquifers, but some say state bureaucracy, designed to distribute water fairly, has stood in the way.",
+      "url": "https://www.nytimes.com/2023/02/21/climate/california-storms-groundwater-aquifer-recharge.html",
+      "uri": "nyt://article/7b23b11a-d687-5a43-9fd4-3ff1951f0849",
+      "byline": "By Raymond Zhong",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T11:42:14-05:00",
+      "created_date": "2023-02-21T12:17:55-05:00",
+      "published_date": "2023-02-21T12:17:55-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Water",
+        "Drought",
+        "Aquifers",
+        "Floods",
+        "Agriculture and Farming",
+        "Reservoirs",
+        "Irrigation",
+        "Infrastructure (Public Works)",
+        "Rivers"
+      ],
+      "org_facet": ["California State Water Resources Control Board"],
+      "per_facet": [],
+      "geo_facet": ["California"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/16/multimedia/00cli-recharge-01-bcqg/00cli-recharge-01-bcqg-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1485,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "The overflowing Russian River in mid-January. Next time there’s a storm, a group of vineyards and local agencies hopes to capture more floodwater.",
+          "copyright": "Fred Greaves/Reuters"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/16/multimedia/00cli-recharge-01-bcqg/00cli-recharge-01-bcqg-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "The overflowing Russian River in mid-January. Next time there’s a storm, a group of vineyards and local agencies hopes to capture more floodwater.",
+          "copyright": "Fred Greaves/Reuters"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/16/multimedia/00cli-recharge-01-bcqg/00cli-recharge-01-bcqg-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "The overflowing Russian River in mid-January. Next time there’s a storm, a group of vineyards and local agencies hopes to capture more floodwater.",
+          "copyright": "Fred Greaves/Reuters"
+        }
+      ],
+      "short_url": "https://nyti.ms/3ErQRKP"
+    },
+    {
+      "section": "world",
+      "subsection": "europe",
+      "title": "China’s Leading Electric Carmaker Has Arrived in Germany",
+      "abstract": "BYD is a powerhouse in China and sells the most electric vehicles of any company in the world. Now it has a plan to attract buyers in Europe’s largest economy.",
+      "url": "https://www.nytimes.com/2023/02/21/world/europe/byd-germany-electric-cars.html",
+      "uri": "nyt://article/c4a76b80-9319-573c-9baa-9c0143b7e9de",
+      "byline": "By Melissa Eddy",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T11:49:11-05:00",
+      "created_date": "2023-02-21T11:53:41-05:00",
+      "published_date": "2023-02-21T11:53:41-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Electric and Hybrid Vehicles",
+        "Batteries",
+        "Factories and Manufacturing",
+        "Automobiles"
+      ],
+      "org_facet": [
+        "BYD Co Ltd",
+        "Ford Motor Co",
+        "Sixt",
+        "Tesla Motors Inc",
+        "Volkswagen AG"
+      ],
+      "per_facet": [],
+      "geo_facet": ["Germany", "China", "Europe"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21germany-byd-01-btwj/21germany-byd-01-btwj-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1365,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "BYD’s Atto-3 electric sport utility vehicle in Frankfurt. So far, the vast majority of BYD cars are sold in China. But the company is looking to expand, particularly in Germany.",
+          "copyright": "Felix Schmitt for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21germany-byd-01-btwj/21germany-byd-01-btwj-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "BYD’s Atto-3 electric sport utility vehicle in Frankfurt. So far, the vast majority of BYD cars are sold in China. But the company is looking to expand, particularly in Germany.",
+          "copyright": "Felix Schmitt for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21germany-byd-01-btwj/21germany-byd-01-btwj-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "BYD’s Atto-3 electric sport utility vehicle in Frankfurt. So far, the vast majority of BYD cars are sold in China. But the company is looking to expand, particularly in Germany.",
+          "copyright": "Felix Schmitt for The New York Times"
+        }
+      ],
+      "short_url": "https://nyti.ms/3xFvVfq"
+    },
+    {
+      "section": "world",
+      "subsection": "europe",
+      "title": "Russia’s Top Paramilitary Chief Accuses Army Command of Treason",
+      "abstract": "Caustic accusations by the head of the Wagner mercenary group, Yevgeny Prigozhin, suggest that his vaunted access to Vladimir Putin may be on the wane.",
+      "url": "https://www.nytimes.com/2023/02/21/world/europe/wagner-russia-military-prigozhin.html",
+      "uri": "nyt://article/e64a1c2e-7574-5194-9e23-88fda3e931fc",
+      "byline": "By Anatoly Kurmanaev",
+      "item_type": "Article",
+      "updated_date": "2023-02-21T23:19:48-05:00",
+      "created_date": "2023-02-21T10:39:11-05:00",
+      "published_date": "2023-02-21T10:39:11-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Russian Invasion of Ukraine (2022)",
+        "Defense and Military Forces"
+      ],
+      "org_facet": ["Wagner Group"],
+      "per_facet": ["Prigozhin, Yevgeny V"],
+      "geo_facet": ["Russia", "Ukraine"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21ukraine-blog-wagner-prigozhin-wzjc/21ukraine-blog-wagner-prigozhin-wzjc-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1463,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Funeral rites for eight Wagner soldiers killed in battle this month.",
+          "copyright": "Nanna Heitmann for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21ukraine-blog-wagner-prigozhin-wzjc/21ukraine-blog-wagner-prigozhin-wzjc-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Funeral rites for eight Wagner soldiers killed in battle this month.",
+          "copyright": "Nanna Heitmann for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21ukraine-blog-wagner-prigozhin-wzjc/21ukraine-blog-wagner-prigozhin-wzjc-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Funeral rites for eight Wagner soldiers killed in battle this month.",
+          "copyright": "Nanna Heitmann for The New York Times"
+        }
+      ],
+      "short_url": "https://nyti.ms/3xI7OwA"
+    },
+    {
+      "section": "world",
+      "subsection": "europe",
+      "title": "Putin’s Move on Nuclear Treaty May Signal End to Formal Arms Control",
+      "abstract": "Mutual inspections were interrupted by the pandemic, then by the war in Ukraine. But now New START, the last nuclear agreement between Russia and the United States, is dying, and arms control may be, too.",
+      "url": "https://www.nytimes.com/2023/02/21/world/europe/putin-new-start-treaty.html",
+      "uri": "nyt://article/7432f24d-c9f1-59ca-b802-48e7cd2e28f8",
+      "byline": "By David E. Sanger",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T08:51:56-05:00",
+      "created_date": "2023-02-21T09:39:50-05:00",
+      "published_date": "2023-02-21T09:39:50-05:00",
+      "material_type_facet": "",
+      "kicker": "News Analysis",
+      "des_facet": [
+        "Speeches and Statements",
+        "Nuclear Weapons",
+        "Defense and Military Forces",
+        "Strategic Arms Reduction Treaty",
+        "Arms Control and Limitation and Disarmament",
+        "Russian Invasion of Ukraine (2022)",
+        "United States International Relations"
+      ],
+      "org_facet": [],
+      "per_facet": ["Putin, Vladimir V", "Biden, Joseph R Jr"],
+      "geo_facet": ["Russia", "Ukraine"],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/world/21ukraine-blog-nukes-context-ukz/21ukraine-blog-nukes-context-ukz-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1365,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "A Russian ballistic missile during a Moscow parade rehearsal in 2021. The New START agreement restricts each side to 1,550 nuclear weapons.",
+          "copyright": "Pavel Golovkin/Associated Press"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/world/21ukraine-blog-nukes-context-ukz/21ukraine-blog-nukes-context-ukz-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "A Russian ballistic missile during a Moscow parade rehearsal in 2021. The New START agreement restricts each side to 1,550 nuclear weapons.",
+          "copyright": "Pavel Golovkin/Associated Press"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/world/21ukraine-blog-nukes-context-ukz/21ukraine-blog-nukes-context-ukz-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "A Russian ballistic missile during a Moscow parade rehearsal in 2021. The New START agreement restricts each side to 1,550 nuclear weapons.",
+          "copyright": "Pavel Golovkin/Associated Press"
+        }
+      ],
+      "short_url": "https://nyti.ms/3xNU8jz"
+    },
+    {
+      "section": "world",
+      "subsection": "",
+      "title": "1923: Blaze Destroys Army Buildings",
+      "abstract": "The fire gutted orderly rooms and stores of the Fifth Division.",
+      "url": "https://www.nytimes.com/2023/02/21/world/1923-blaze-destroys-army-buildings.html",
+      "uri": "nyt://article/5c63b61d-73aa-5d64-b2a0-9e009e5bffa4",
+      "byline": "By The International Herald Tribune",
+      "item_type": "Article",
+      "updated_date": "2023-02-21T09:02:52-05:00",
+      "created_date": "2023-02-21T09:02:52-05:00",
+      "published_date": "2023-02-21T09:02:52-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [],
+      "org_facet": [],
+      "per_facet": [],
+      "geo_facet": [],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/world/21ihtretrospective-image-february/21ihtretrospective-image-february-superJumbo.png",
+          "format": "Super Jumbo",
+          "height": 118,
+          "width": 300,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": " International Herald Tribune"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/world/21ihtretrospective-image-february/21ihtretrospective-image-february-threeByTwoSmallAt2X.png",
+          "format": "threeByTwoSmallAt2X",
+          "height": 118,
+          "width": 177,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": " International Herald Tribune"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/world/21ihtretrospective-image-february/21ihtretrospective-image-february-thumbStandard.png",
+          "format": "Standard Thumbnail",
+          "height": 75,
+          "width": 75,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": " International Herald Tribune"
+        }
+      ],
+      "short_url": "https://nyti.ms/3Slm9IJ"
+    },
+    {
+      "section": "climate",
+      "subsection": "",
+      "title": "A Sudden Rush to Make Sustainable Aviation Fuel Mainstream",
+      "abstract": "United Airlines and other companies have started a $100 million fund to invest in jet fuel that produces fewer greenhouse gases.",
+      "url": "https://www.nytimes.com/2023/02/21/climate/united-sustainable-aviation-fuel.html",
+      "uri": "nyt://article/41d0120c-2cfa-5b15-868b-08511514791f",
+      "byline": "By David Gelles",
+      "item_type": "Article",
+      "updated_date": "2023-02-22T11:24:48-05:00",
+      "created_date": "2023-02-21T08:01:08-05:00",
+      "published_date": "2023-02-21T08:01:08-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Airlines and Airplanes",
+        "Fuel Emissions (Transportation)",
+        "Sustainable Living",
+        "Global Warming",
+        "Carbon Dioxide"
+      ],
+      "org_facet": ["United Airlines"],
+      "per_facet": [],
+      "geo_facet": [],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21cli-aviationfuel-sub-qtgc/21cli-aviationfuel-sub-qtgc-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1365,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Aircraft at San Francisco International Airport in 2021. Making sustainable aviation fuel mainstream will be difficult and costly to achieve.",
+          "copyright": "Gabriela Bhaskar/The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21cli-aviationfuel-sub-qtgc/21cli-aviationfuel-sub-qtgc-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Aircraft at San Francisco International Airport in 2021. Making sustainable aviation fuel mainstream will be difficult and costly to achieve.",
+          "copyright": "Gabriela Bhaskar/The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/21/multimedia/21cli-aviationfuel-sub-qtgc/21cli-aviationfuel-sub-qtgc-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Aircraft at San Francisco International Airport in 2021. Making sustainable aviation fuel mainstream will be difficult and costly to achieve.",
+          "copyright": "Gabriela Bhaskar/The New York Times"
+        }
+      ],
+      "short_url": "https://nyti.ms/41gnlBy"
+    }
+  ]
+}
