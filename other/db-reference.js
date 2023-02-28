@@ -20,3 +20,23 @@ export function addEmployee() {
     .then((response) => response.json())
     .then((json) => console.log(json));
 }
+
+// ==
+
+function getEmployees() {
+  fetch("http://localhost:3000/employees/")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      return data;
+    });
+}
+
+function showEmployees(employees) {
+  employeesListing = employees;
+  employees.map((employee) => {
+    const li = document.createElement("li");
+    li.innerHTML = `${employee.name} - $${employee.salary}`;
+    document.querySelector("ul").appendChild(li);
+  });
+}

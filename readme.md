@@ -725,6 +725,12 @@ for (let i = 0; i < data.length; i++) {
 }
 ```
 
+## Local JSON Server
+
+Use the db directory to start a server.
+
+Create a form to create a new employee.
+
 ## New York Times API
 
 Let's use the New York Times [developers](https://developer.nytimes.com/) site for our data.
