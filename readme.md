@@ -1,4 +1,4 @@
-# The JAMStack, 11ty and Static Site Generation
+# The JAMStack, AJAX and Static Site Generation
 
 ## Homework
 
@@ -600,7 +600,7 @@ _API_ stands for [Application Programming Interface](https://medium.freecodecamp
 
 ### 1.8.2. Rest API
 
-We need data we can fetch from the internet. We'll start with the [Typicode](http://jsonplaceholder.typicode.com/) play ground. Note that you can do more than just get data, you can also post, create, delete and update data. Together these functions are often refered to as `CRUD`.
+We need data we can fetch from the internet. We'll start with the [Typicode](http://jsonplaceholder.typicode.com/) playground. Note that you can do more than just get data, you can also post, create, delete and update data. Together these functions are often refered to as `CRUD`.
 
 Open a console in the browser.
 
@@ -621,13 +621,13 @@ Since the promise is resolved you can see the actual data in the console. It ret
 ```sh
 fetch('https://jsonplaceholder.typicode.com/posts/')
   .then(response => response.json())
-  .then(json => console.log(json))
+  .then(data => console.log(data))
 ```
 
 ```sh
 fetch('https://jsonplaceholder.typicode.com/posts/')
   .then(response => response.json())
-  .then(json => console.log( json.map( item => `<h2>${item.title}</h2>` )))
+  .then(data => console.log( data.map( item => `<h2>${item.title}</h2>` )))
 ```
 
 You can see the same data if you travel to `https://jsonplaceholder.typicode.com/posts/` in a new tab. Try [other resources](http://jsonplaceholder.typicode.com/) such as comments or photos.
@@ -702,7 +702,7 @@ Note:
 - `data[1].body` - we use dot notation to access just one of the properties of the object
 
 
-document.querySelector(".stories").innerText = data; WONT WORK
+`document.querySelector(".stories").innerText = data;` WONT WORK
 
 Demo : a quick tour of the network panel in Chrome's dev tools.
 
