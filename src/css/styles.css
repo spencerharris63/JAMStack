@@ -59,3 +59,10 @@ button {
   width: 60%;
   padding: 1rem;
 }
+
+.pictures img {
+  max-width: 50%;
+}
+.pictures h1 {
+  color: rgb(11, 123, 11);
+}
