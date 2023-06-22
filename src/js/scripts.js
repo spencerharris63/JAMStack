@@ -1,4 +1,4 @@
-const API = "https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=YCGYeAP1WfAcWVPiJYO9vdzrHtXqiebB";
+const API = "http://localhost:3000/results";
   // "https://api.nytimes.com/svc/topstories/v2/nyregion.json?api-key=RuG9N6lD1Xss81PdRbmhuiJHjuiPEt6R";
 
 function getStories() {
