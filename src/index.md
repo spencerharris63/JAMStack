@@ -6,5 +6,4 @@ pageClass: home
 
 ## Articles
 
-<main class="stories"></main>
-
+<main class="stories">Loading...</div>
